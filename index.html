@@ -12,15 +12,15 @@
     }
 
     :root {
-      --bg: #0a0a0a;
-      --bg-soft: #121212;
-      --panel: #171717;
-      --panel-2: #1d1d1d;
-      --text: #f5f5f5;
-      --muted: #b8b8b8;
-      --line: #2a2a2a;
-      --accent: #e10600;
-      --accent-soft: #ff3b30;
+      --bg: #ffffff;
+      --bg-soft: #f4f6f8;
+      --panel: #ffffff;
+      --panel-2: #f4f6f8;
+      --text: #002b5c;
+      --muted: #5f6f82;
+      --line: #d9e3ec;
+      --accent: #0057b8;
+      --accent-soft: #00aeef;
       --max: 1180px;
     }
 
@@ -33,7 +33,7 @@
     }
 
     a {
-      color: white;
+      color: var(--accent);
       text-decoration: none;
     }
 
@@ -48,7 +48,7 @@
       display: flex;
       align-items: flex-end;
       background:
-        linear-gradient(to top, rgba(0,0,0,0.85) 10%, rgba(0,0,0,0.25) 55%, rgba(0,0,0,0.45) 100%),
+        linear-gradient(to top, rgba(0,43,92,0.82) 10%, rgba(0,87,184,0.28) 55%, rgba(0,43,92,0.58) 100%),
         url('hero-sailing.jpg') center center / cover no-repeat;
     }
 
@@ -60,7 +60,7 @@
     }
 
     .eyebrow {
-      color: var(--accent-soft);
+      color: #dff7ff;
       text-transform: uppercase;
       letter-spacing: 0.12em;
       font-weight: bold;
@@ -69,16 +69,17 @@
     }
 
     .hero h1 {
-      font-size: clamp(3rem, 8vw, 6.6rem);
+      font-size: clamp(3rem, 8vw, 6.2rem);
       line-height: 0.95;
       margin: 0 0 18px;
       text-transform: uppercase;
       max-width: 950px;
+      color: white;
     }
 
     .hero p {
       max-width: 760px;
-      color: #ededed;
+      color: #f4fbff;
       font-size: 1.1rem;
       margin: 0 0 28px;
     }
@@ -99,12 +100,12 @@
     }
 
     .btn-primary {
-      background: var(--accent);
+      background: #00aeef;
       color: white;
     }
 
     .btn-secondary {
-      border: 1px solid rgba(255,255,255,0.35);
+      border: 1px solid rgba(255,255,255,0.55);
       color: white;
       background: transparent;
     }
@@ -113,7 +114,7 @@
       position: sticky;
       top: 0;
       z-index: 50;
-      background: rgba(10,10,10,0.92);
+      background: rgba(255,255,255,0.94);
       backdrop-filter: blur(8px);
       border-bottom: 1px solid var(--line);
     }
@@ -133,6 +134,7 @@
       text-transform: uppercase;
       letter-spacing: 0.08em;
       font-size: 0.9rem;
+      color: var(--text);
     }
 
     .nav {
@@ -142,7 +144,7 @@
     }
 
     .nav a {
-      color: #d6d6d6;
+      color: #002b5c;
       font-size: 0.94rem;
       font-weight: bold;
     }
@@ -171,12 +173,13 @@
       line-height: 1.05;
       text-transform: uppercase;
       margin: 0 0 18px;
+      color: var(--text);
     }
 
     .lead {
       max-width: 860px;
       font-size: 1.1rem;
-      color: #e6e6e6;
+      color: var(--text);
       margin-bottom: 28px;
     }
 
@@ -198,19 +201,21 @@
     }
 
     .card {
-      background: var(--panel);
+      background: #ffffff;
       border: 1px solid var(--line);
       padding: 24px;
+      box-shadow: 0 10px 24px rgba(0, 43, 92, 0.06);
     }
 
     .card h3 {
       margin: 0 0 10px;
       font-size: 1.1rem;
       text-transform: uppercase;
+      color: var(--text);
     }
 
     .statement {
-      background: var(--accent);
+      background: linear-gradient(135deg, #0057b8, #00aeef);
       color: white;
     }
 
@@ -238,7 +243,7 @@
     }
 
     .timeline-year {
-      color: var(--accent-soft);
+      color: var(--accent);
       font-weight: bold;
       text-transform: uppercase;
       letter-spacing: 0.08em;
@@ -249,6 +254,7 @@
       margin: 0 0 8px;
       text-transform: uppercase;
       font-size: 1.06rem;
+      color: var(--text);
     }
 
     .roots-grid {
@@ -259,14 +265,10 @@
     }
 
     .image-frame {
-      background: var(--panel);
+      background: #ffffff;
       border: 1px solid var(--line);
       padding: 14px;
-    }
-
-    .image-frame img {
-      width: 100%;
-      height: auto;
+      box-shadow: 0 10px 24px rgba(0, 43, 92, 0.08);
     }
 
     .image-caption {
@@ -282,11 +284,68 @@
 
     .list li {
       margin-bottom: 9px;
-      color: #efefef;
+      color: var(--text);
+    }
+
+    .flag-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 14px;
+      margin-top: 24px;
+    }
+
+    .flag-card {
+      background: #ffffff;
+      border: 1px solid var(--line);
+      padding: 16px;
+      text-align: center;
+      box-shadow: 0 8px 18px rgba(0, 43, 92, 0.05);
+    }
+
+    .flag {
+      font-size: 1.8rem;
+      margin-bottom: 8px;
+    }
+
+    .flag-card span {
+      display: block;
+      font-weight: bold;
+      color: var(--text);
+      font-size: 0.95rem;
+    }
+
+    .sources-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 18px;
+    }
+
+    .source-card {
+      background: #f4f6f8;
+      border: 1px solid var(--line);
+      padding: 22px;
+    }
+
+    .source-card h3 {
+      margin-top: 0;
+      margin-bottom: 12px;
+      text-transform: uppercase;
+      font-size: 1rem;
+      color: var(--text);
+    }
+
+    .source-card ul {
+      margin: 0;
+      padding-left: 18px;
+    }
+
+    .source-card li {
+      margin-bottom: 10px;
+      color: var(--text);
     }
 
     .contact-box {
-      background: var(--panel);
+      background: #f4f6f8;
       border: 1px solid var(--line);
       padding: 26px;
     }
@@ -307,7 +366,9 @@
     @media (max-width: 950px) {
       .split,
       .roots-grid,
-      .cards {
+      .cards,
+      .sources-grid,
+      .flag-grid {
         grid-template-columns: 1fr;
       }
 
@@ -370,7 +431,9 @@
         <a href="#biography">Biography</a>
         <a href="#timeline">Timeline</a>
         <a href="#leadership">Leadership</a>
+        <a href="#international">International</a>
         <a href="#roots">Roots</a>
+        <a href="#sources">Sources</a>
         <a href="#contact">Contact</a>
       </nav>
     </div>
@@ -551,6 +614,49 @@
     </div>
   </section>
 
+  <section class="section" id="international">
+    <div class="section-label">International Experience</div>
+    <h2>Global Coaching Footprint</h2>
+    <p class="lead">
+      Cerutti’s sailing and coaching career has unfolded across multiple international environments, reflecting a broad understanding of athlete development, club culture, and competitive sailing systems.
+    </p>
+
+    <div class="flag-grid">
+      <div class="flag-card">
+        <div class="flag">🇦🇷</div>
+        <span>Argentina</span>
+      </div>
+      <div class="flag-card">
+        <div class="flag">🇵🇾</div>
+        <span>Paraguay</span>
+      </div>
+      <div class="flag-card">
+        <div class="flag">🇪🇸</div>
+        <span>Spain</span>
+      </div>
+      <div class="flag-card">
+        <div class="flag">🇨🇭</div>
+        <span>Switzerland</span>
+      </div>
+      <div class="flag-card">
+        <div class="flag">🇺🇸</div>
+        <span>United States</span>
+      </div>
+      <div class="flag-card">
+        <div class="flag">🇫🇷</div>
+        <span>France</span>
+      </div>
+      <div class="flag-card">
+        <div class="flag">🇬🇧</div>
+        <span>United Kingdom</span>
+      </div>
+      <div class="flag-card">
+        <div class="flag">🇩🇪</div>
+        <span>Germany</span>
+      </div>
+    </div>
+  </section>
+
   <section class="section" id="roots">
     <div class="section-label">Roots</div>
     <h2>Early Sailing Roots</h2>
@@ -577,6 +683,51 @@
     </div>
   </section>
 
+  <section class="section" id="sources">
+    <div class="section-label">Verified Sources</div>
+    <h2>Public References & Records</h2>
+    <p class="lead">
+      The following public sources support key parts of Florencia Cerutti’s athletic and professional background.
+    </p>
+
+    <div class="sources-grid">
+      <div class="source-card">
+        <h3>Official Databases</h3>
+        <ul>
+          <li><a href="https://www.olympedia.org/athletes/117784" target="_blank">Olympedia Athlete Profile</a></li>
+          <li><a href="https://olympics.com/en/athletes/florencia-cerutti-bogado" target="_blank">Olympics.com Athlete Profile</a></li>
+          <li><a href="https://olympics.com/es/olympic-games/beijing-2008/results/sailing/laser-radial-one-person-dinghy-women" target="_blank">Beijing 2008 Olympic Results</a></li>
+        </ul>
+      </div>
+
+      <div class="source-card">
+        <h3>Sailing Organizations</h3>
+        <ul>
+          <li><a href="https://www.sailing.org/2008/08/08/lone-sailors-carry-hopes-of-their-country/" target="_blank">World Sailing – Olympic Coverage</a></li>
+          <li><a href="https://www.swiss-sailing-team.ch/le-talent-pool-2020-annonce/" target="_blank">Swiss Sailing Team – Talent Pool</a></li>
+          <li><a href="https://www.usoda.org/" target="_blank">USODA</a></li>
+        </ul>
+      </div>
+
+      <div class="source-card">
+        <h3>Professional Profiles</h3>
+        <ul>
+          <li><a href="https://www.linkedin.com/in/flor-cerutti-sailing-coach" target="_blank">LinkedIn – Flor Cerutti</a></li>
+          <li><a href="https://fkwinds.wordpress.com/fk-coaching/" target="_blank">FK Winds / Coaching Profile</a></li>
+        </ul>
+      </div>
+
+      <div class="source-card">
+        <h3>Media & Articles</h3>
+        <ul>
+          <li><a href="https://www.sail-world.com/-47138/" target="_blank">Sail-World – Olympic Story</a></li>
+          <li><a href="https://48north.com/racing/race-reports/little-boats-on-the-big-stage/" target="_blank">48° North – Coaching Reference</a></li>
+          <li><a href="https://cou.org.uy/wp-content/uploads/2025/10/DELEGACION-JUEGOS-DE-LA-XXXIII-OLIMPIADA-PARIS-2024.pdf" target="_blank">Uruguayan Olympic Committee – Paris 2024 Delegation</a></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
   <section class="section" id="contact">
     <div class="section-label">Contact</div>
     <h2>Professional Contact</h2>
@@ -584,7 +735,7 @@
     <div class="contact-box">
       <p>For coaching opportunities, speaking engagements, collaborations, or professional inquiries, please get in touch.</p>
       <p><strong>Email:</strong> add-your-email-here</p>
-      <p><strong>LinkedIn:</strong> https://www.linkedin.com/in/flor-cerutti-sailing-coach</p>
+      <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/flor-cerutti-sailing-coach" target="_blank">flor-cerutti-sailing-coach</a></p>
     </div>
   </section>
 
