@@ -47,7 +47,7 @@
     }
 
     .hero {
-      min-height: 100vh;
+      min-height: 72vh;
       display: flex;
       align-items: flex-end;
       background:
@@ -60,7 +60,7 @@
       width: 100%;
       max-width: var(--max);
       margin: 0 auto;
-      padding: 48px 20px 72px;
+      padding: 42px 20px 52px;
     }
 
     .eyebrow {
@@ -74,17 +74,17 @@
 
     .hero h1 {
       margin: 0 0 14px;
-      font-size: clamp(3rem, 8vw, 6rem);
-      line-height: 0.94;
+      font-size: clamp(3.2rem, 8vw, 6rem);
+      line-height: 0.92;
       text-transform: uppercase;
-      max-width: 980px;
+      max-width: 900px;
     }
 
     .hero p {
       max-width: 760px;
-      margin: 0 0 28px;
+      margin: 0 0 26px;
       color: #eef8ff;
-      font-size: 1.12rem;
+      font-size: 1.08rem;
     }
 
     .hero-actions {
@@ -158,10 +158,33 @@
       font-weight: bold;
     }
 
+    .intro-band {
+      background: var(--navy-deep);
+      color: white;
+    }
+
+    .intro-band .section {
+      padding: 34px 20px;
+    }
+
+    .intro-band p {
+      margin: 0;
+      max-width: 980px;
+      font-size: 1.18rem;
+      line-height: 1.55;
+      color: #eef8ff;
+    }
+
     .section {
       max-width: var(--max);
       margin: 0 auto;
       padding: 74px 20px;
+    }
+
+    .section-tight {
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 60px 20px;
     }
 
     .section + .section {
@@ -177,7 +200,8 @@
       margin-bottom: 14px;
     }
 
-    .section h2 {
+    .section h2,
+    .section-tight h2 {
       font-size: clamp(2rem, 5vw, 3.3rem);
       line-height: 1.05;
       text-transform: uppercase;
@@ -199,6 +223,13 @@
     .split {
       display: grid;
       grid-template-columns: 1.15fr 0.85fr;
+      gap: 28px;
+      align-items: start;
+    }
+
+    .split-wide {
+      display: grid;
+      grid-template-columns: 1.3fr 0.7fr;
       gap: 28px;
       align-items: start;
     }
@@ -249,15 +280,15 @@
 
     .timeline {
       display: grid;
-      gap: 18px;
-      margin-top: 12px;
+      gap: 0;
+      max-width: 980px;
     }
 
     .timeline-item {
       display: grid;
-      grid-template-columns: 145px 1fr;
-      gap: 18px;
-      padding: 18px 0;
+      grid-template-columns: 160px 1fr;
+      gap: 24px;
+      padding: 22px 0;
       border-top: 1px solid var(--line);
     }
 
@@ -272,12 +303,13 @@
       text-transform: uppercase;
       letter-spacing: 0.08em;
       font-size: 0.92rem;
+      padding-top: 4px;
     }
 
     .timeline-item h3 {
       margin: 0 0 8px;
       text-transform: uppercase;
-      font-size: 1.05rem;
+      font-size: 1.08rem;
       color: var(--text);
     }
 
@@ -466,11 +498,12 @@
 
     @media (max-width: 980px) {
       .split,
-      .roots-grid,
+      .split-wide,
       .cards-3,
       .cards-2,
       .sources-grid,
-      .country-grid {
+      .country-grid,
+      .roots-grid {
         grid-template-columns: 1fr;
       }
 
@@ -482,7 +515,11 @@
 
     @media (max-width: 720px) {
       .hero {
-        min-height: 82vh;
+        min-height: 62vh;
+      }
+
+      .hero-inner {
+        padding: 34px 20px 40px;
       }
 
       .topbar-inner {
@@ -494,14 +531,16 @@
         gap: 12px;
       }
 
-      .section {
+      .section,
+      .section-tight {
         padding: 58px 20px;
       }
 
-      .hero-inner {
-        padding: 40px 20px 52px;
+      .intro-band .section {
+        padding: 26px 20px;
       }
 
+      .intro-band p,
       .hero p,
       .lead {
         font-size: 1rem;
@@ -518,9 +557,9 @@
   <section class="hero">
     <div class="hero-inner">
       <div class="eyebrow">Olympian • International Sailing Coach • Program Leader</div>
-      <h1>Florencia Cerutti</h1>
+      <h1>Florencia Cerutti, OLY</h1>
       <p>
-        From Olympic competition to international coaching, athlete development, coach education, and long-term sailing program leadership across multiple high-performance environments.
+        Olympian, international sailing coach, and program leader with experience in athlete development, coach education, and competitive sailing structures across multiple high-performance environments.
       </p>
       <div class="hero-actions">
         <a class="btn btn-primary" href="#biography">Explore Career</a>
@@ -531,58 +570,69 @@
 
   <div class="topbar">
     <div class="topbar-inner">
-      <div class="brand">Florencia Cerutti</div>
-<nav class="nav">
-  <a href="#biography">Biography</a>
-  <a href="#timeline">Timeline</a>
-  <a href="#leadership">Leadership</a>
-  <a href="#development">Development</a>
-  <a href="#current-role">Current Role</a>
-  <a href="#education">Education</a>
-  <a href="#international">International</a>
-  <a href="#archive">Archive</a>
-  <a href="#roots">Roots</a>
-  <a href="#sources">Sources</a>
-  <a href="#contact">Contact</a>
-</nav>
+      <div class="brand">Florencia Cerutti, OLY</div>
+      <nav class="nav">
+        <a href="#biography">Biography</a>
+        <a href="#current-role">Current Role</a>
+        <a href="#timeline">Timeline</a>
+        <a href="#leadership">Leadership</a>
+        <a href="#development">Development</a>
+        <a href="#education">Education</a>
+        <a href="#international">International</a>
+        <a href="#archive">Archive</a>
+        <a href="#roots">Roots</a>
+        <a href="#sources">Sources</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </div>
+
+  <section class="intro-band">
+    <div class="section">
+      <p>
+        From Olympic competition to international coaching, athlete development, coach education, and long-term sailing program leadership, Florencia Cerutti has built a career that connects elite sport with sustainable competitive environments.
+      </p>
+    </div>
+  </section>
 
   <section class="section" id="biography">
     <div class="section-label">Biography</div>
     <h2>Olympian. International Coach. Program Leader.</h2>
-    <p class="lead">
-      Florencia Cerutti is an Olympian and internationally recognized sailing coach with extensive experience in high-performance athlete development, competitive team leadership, coach education, and long-term program growth.
-    </p>
 
-    <div class="split">
+    <div class="split-wide">
       <div>
+        <p class="lead">
+          Florencia Cerutti is an Olympian and internationally recognized sailing coach with extensive experience in high-performance athlete development, competitive team leadership, coach education, and long-term program growth.
+        </p>
+
         <p>
           Born in Buenos Aires, Argentina, Cerutti built her athletic career in Olympic single-handed classes and represented Paraguay at the 2008 Olympic Games in Beijing, becoming the first Paraguayan woman to compete in Olympic sailing.
         </p>
+
         <p>
           Throughout her competitive career, she achieved major continental results and established herself as a respected athlete in South American and international sailing environments.
         </p>
+
         <p>
           After her Olympic campaign, she moved to Barcelona and began an international coaching career that expanded across clubs, federations, development programs, and high-performance sailing environments in Europe, the Americas, and beyond.
         </p>
+
         <p>
           Her work extends beyond on-the-water coaching. Cerutti has led racing programs, supported athlete pathways, trained and mentored coaches, coordinated regatta logistics, and contributed to the long-term growth of competitive sailing structures.
-        </p>
-        <p>
-          She currently serves as Head Coach and Assistant Sailing Director at Norfolk Yacht & Country Club in Virginia.
         </p>
       </div>
 
       <div class="card statement">
         <h3>Professional Identity</h3>
         <p>
-          Florencia Cerutti’s career is built on four pillars: elite athletic experience, international coaching expertise, coach education, and a long-term commitment to developing the next generation of sailors.
+          Cerutti’s profile brings together Olympic athletic experience, international coaching expertise, coach education, and long-term sailing program leadership.
         </p>
       </div>
     </div>
   </section>
 
-  <section class="section">
-    <div class="section-label">Snapshot</div>
+  <section class="section-tight">
+    <div class="section-label">Overview</div>
     <h2>Career at a Glance</h2>
 
     <div class="cards-3">
@@ -596,15 +646,47 @@
       <div class="card">
         <h3>International Coach</h3>
         <p>
-          Built a coaching career across clubs, federations, youth programs, and high-performance environments in multiple countries.
+          Built a coaching career across clubs, federations, youth programs, national teams, and high-performance environments.
         </p>
       </div>
 
       <div class="card">
         <h3>Program Leader</h3>
         <p>
-          Experienced in athlete development, coach education, staff leadership, operations, planning, and sustainable program growth.
+          Experienced in athlete development, coach mentorship, staff leadership, operations, planning, and sustainable program growth.
         </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="current-role">
+    <div class="section-label">Current Role</div>
+    <h2>Head Coach & Assistant Sailing Director</h2>
+
+    <div class="split-wide">
+      <div>
+        <p class="lead">
+          Florencia Cerutti, OLY, currently serves as Head Coach and Assistant Sailing Director at Norfolk Yacht & Country Club in Virginia, United States.
+        </p>
+
+        <p>
+          In this role she oversees youth racing programs, supports athlete development pathways, and contributes to the structure and growth of competitive sailing within one of the region’s most active sailing communities.
+        </p>
+
+        <p>
+          Her responsibilities include on-water coaching, program planning, coach mentorship, regatta preparation, and the development of training environments that support both performance and long-term sailor progression.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>Current Focus</h3>
+        <ul class="list">
+          <li>Youth race team development</li>
+          <li>Daily coaching and technical oversight</li>
+          <li>Competitive progression pathways</li>
+          <li>Coach support and mentorship</li>
+          <li>Program structure and regatta planning</li>
+        </ul>
       </div>
     </div>
   </section>
@@ -750,44 +832,32 @@
   </section>
 
   <section class="section" id="leadership">
-  <div class="section-label">Leadership</div>
-  <h2>Coaching & Program Leadership</h2>
+    <div class="section-label">Leadership</div>
+    <h2>Coaching & Program Leadership</h2>
 
-  <div class="split">
-    <div>
-      <p class="lead">
-        Cerutti’s work extends beyond traditional coaching roles. Throughout her career she has contributed to the development and leadership of sailing programs by combining technical coaching, athlete mentorship, and strategic program planning.
-      </p>
-      <ul class="list">
-        <li>High-performance athlete coaching and race preparation</li>
-        <li>Youth development pathways and competitive team progression</li>
-        <li>Coach education and mentorship</li>
-        <li>Training, clinic, and regatta schedule design</li>
-        <li>Staff supervision and coaching team coordination</li>
-        <li>Fleet oversight, logistics, and operational planning</li>
-        <li>Safety systems and long-term program structure</li>
-      </ul>
-    </div>
-
-    <div class="card">
-      <h3>Leadership Focus</h3>
-      <p>
-        Her responsibilities across different organizations have included designing training structures, supporting competitive pathways for young sailors, mentoring coaching staff, and strengthening team environments that promote discipline, resilience, and performance.
-      </p>
-      <p>
-        This integrated approach has allowed her to contribute not only to individual athlete success but also to the long-term sustainability and growth of competitive sailing programs.
-      </p>
-    </div>
-  </div>
-</section>
+    <div class="split">
+      <div>
+        <p class="lead">
+          Cerutti’s work extends beyond traditional coaching roles. Throughout her career she has contributed to the development and leadership of sailing programs by combining technical coaching, athlete mentorship, and strategic program planning.
+        </p>
+        <ul class="list">
+          <li>High-performance athlete coaching and race preparation</li>
+          <li>Youth development pathways and competitive team progression</li>
+          <li>Coach education and mentorship</li>
+          <li>Training, clinic, and regatta schedule design</li>
+          <li>Staff supervision and coaching team coordination</li>
+          <li>Fleet oversight, logistics, and operational planning</li>
+          <li>Safety systems and long-term program structure</li>
+        </ul>
+      </div>
 
       <div class="card">
-        <h3>Coaching Philosophy</h3>
+        <h3>Leadership Focus</h3>
         <p>
-          Her coaching philosophy combines technical excellence, resilience, tactical intelligence, and long-term athlete growth.
+          Her responsibilities across different organizations have included designing training structures, supporting competitive pathways for young sailors, mentoring coaching staff, and strengthening team environments that promote discipline, resilience, and performance.
         </p>
         <p>
-          Cerutti builds environments where performance, responsibility, and leadership develop side by side.
+          This integrated approach has allowed her to contribute not only to individual athlete success but also to the long-term sustainability and growth of competitive sailing programs.
         </p>
       </div>
     </div>
@@ -827,64 +897,34 @@
     </div>
   </section>
 
-<section class="section" id="current-role">
-  <div class="section-label">Current Role</div>
-  <h2>Head Coach & Assistant Sailing Director</h2>
+  <section class="section" id="education">
+    <div class="section-label">Education</div>
+    <h2>Certifications & Professional Education</h2>
 
-  <div class="split">
-    <div>
-      <p class="lead">
-        Florencia Cerutti, OLY, currently serves as Head Coach and Assistant Sailing Director at Norfolk Yacht & Country Club in Virginia, United States.
-      </p>
-      <p>
-        In this role she oversees youth racing programs, supports athlete development pathways, and contributes to the structure and growth of competitive sailing within one of the region’s most active sailing communities.
-      </p>
-      <p>
-        Her responsibilities include on-water coaching, program planning, coach mentorship, regatta preparation, and the development of training environments that support both performance and long-term sailor progression.
-      </p>
+    <p class="lead">
+      Professional development has remained an important part of Cerutti’s career, complementing her experience as an Olympian, international coach, and sailing program leader.
+    </p>
+
+    <div class="cards-3">
+      <div class="card">
+        <h3>Professional Sport Management</h3>
+        <p>International Olympic Committee (IOC)</p>
+        <p class="muted">Issued 2023</p>
+      </div>
+
+      <div class="card">
+        <h3>Beijing 2008 Laser Radial Olympics Participant</h3>
+        <p>International Olympic Committee (IOC)</p>
+        <p class="muted">Issued 2008</p>
+      </div>
+
+      <div class="card">
+        <h3>Additional Professional Education</h3>
+        <p>Includes safety, anti-doping, athlete welfare, and sport-related training completed during her coaching career in Europe.</p>
+      </div>
     </div>
+  </section>
 
-    <div class="card">
-      <h3>Current Focus</h3>
-      <ul class="list">
-        <li>Youth race team development</li>
-        <li>Daily coaching and technical oversight</li>
-        <li>Competitive progression pathways</li>
-        <li>Coach support and mentorship</li>
-        <li>Program structure and regatta planning</li>
-      </ul>
-    </div>
-  </div>
-</section>
-
-<section class="section" id="education">
-  <div class="section-label">Education</div>
-  <h2>Certifications & Professional Education</h2>
-
-  <p class="lead">
-    Professional development has remained an important part of Cerutti’s career, complementing her experience as an Olympian, international coach, and sailing program leader.
-  </p>
-
-  <div class="cards-3">
-    <div class="card">
-      <h3>Professional Sport Management</h3>
-      <p>International Olympic Committee (IOC)</p>
-      <p class="muted">Issued 2023</p>
-    </div>
-
-    <div class="card">
-      <h3>Beijing 2008 Laser Radial Olympics Participant</h3>
-      <p>International Olympic Committee (IOC)</p>
-      <p class="muted">Issued 2008</p>
-    </div>
-
-    <div class="card">
-      <h3>Additional Professional Education</h3>
-      <p>Includes safety, anti-doping, athlete welfare, and sport-related training completed during her coaching career in Europe.</p>
-    </div>
-  </div>
-</section>
-  
   <section class="section" id="international">
     <div class="section-label">International Experience</div>
     <h2>Global Coaching Footprint</h2>
@@ -914,22 +954,18 @@
       <div class="country-card"><div class="flag">🇪🇸</div><span>Spain</span></div>
       <div class="country-card"><div class="flag">🇨🇭</div><span>Switzerland</span></div>
       <div class="country-card"><div class="flag">🇺🇸</div><span>United States</span></div>
-
       <div class="country-card"><div class="flag">🇨🇦</div><span>Canada</span></div>
       <div class="country-card"><div class="flag">🇲🇽</div><span>Mexico</span></div>
       <div class="country-card"><div class="flag">🇨🇼</div><span>Curaçao</span></div>
       <div class="country-card"><div class="flag">🇪🇨</div><span>Ecuador</span></div>
-
       <div class="country-card"><div class="flag">🇬🇧</div><span>United Kingdom</span></div>
       <div class="country-card"><div class="flag">🇮🇸</div><span>Iceland</span></div>
       <div class="country-card"><div class="flag">🇳🇴</div><span>Norway</span></div>
       <div class="country-card"><div class="flag">🇩🇪</div><span>Germany</span></div>
-
       <div class="country-card"><div class="flag">🇫🇮</div><span>Finland</span></div>
       <div class="country-card"><div class="flag">🇮🇱</div><span>Israel</span></div>
       <div class="country-card"><div class="flag">🇹🇭</div><span>Thailand</span></div>
       <div class="country-card"><div class="flag">🇲🇾</div><span>Malaysia</span></div>
-
       <div class="country-card"><div class="flag">🇵🇭</div><span>Philippines</span></div>
       <div class="country-card"><div class="flag">🇵🇬</div><span>Papua New Guinea</span></div>
       <div class="country-card"><div class="flag">🇨🇰</div><span>Cook Islands</span></div>
@@ -957,7 +993,7 @@
           <div class="media">Beijing 2008</div>
           <div class="copy">
             <h3>Olympic Games</h3>
-            <p class="muted">Photos from the Beijing Olympic Games and official competition environment.</p>
+            <p class="muted">Photos from the Olympic Games and official competition environment.</p>
           </div>
         </div>
 
@@ -1080,8 +1116,8 @@
     <h2>Professional Contact</h2>
 
     <div class="contact-box">
-      <p>For coaching opportunities, collaborations, speaking engagements, or professional inquiries, please get in touch.</p>
-      <p><strong>Email:</strong> coachflorc@gmail.com</p>
+      <p>For coaching opportunities, collaborations, speaking engagements, or professional inquiries related to Florencia Cerutti, OLY, please get in touch.</p>
+      <p><strong>Email:</strong> add-your-email-here</p>
       <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/flor-cerutti-sailing-coach" target="_blank">flor-cerutti-sailing-coach</a></p>
     </div>
   </section>
