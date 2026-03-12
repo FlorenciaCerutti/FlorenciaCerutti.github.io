@@ -4,7 +4,8 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Florencia Cerutti | Olympian & International Sailing Coach</title>
-  <meta name="description" content="Official portfolio website of Florencia Cerutti, Olympian, international sailing coach, and sailing program leader." />
+  <meta name="description" content="Official portfolio website of Florencia Cerutti, Olympian, international sailing coach, coach educator, and sailing program leader." />
+
   <style>
     * {
       box-sizing: border-box;
@@ -13,15 +14,18 @@
 
     :root {
       --bg: #ffffff;
-      --bg-soft: #f4f6f8;
+      --bg-soft: #f4f7fb;
       --panel: #ffffff;
-      --panel-2: #f4f6f8;
+      --panel-soft: #f7fafc;
       --text: #002b5c;
       --muted: #5f6f82;
-      --line: #d9e3ec;
+      --line: #d7e2ec;
       --accent: #0057b8;
       --accent-soft: #00aeef;
+      --navy-deep: #001f45;
+      --shadow: 0 12px 28px rgba(0, 43, 92, 0.08);
       --max: 1180px;
+      --radius: 18px;
     }
 
     body {
@@ -44,19 +48,19 @@
 
     .hero {
       min-height: 100vh;
-      position: relative;
       display: flex;
       align-items: flex-end;
       background:
-        linear-gradient(to top, rgba(0,43,92,0.82) 10%, rgba(0,87,184,0.28) 55%, rgba(0,43,92,0.58) 100%),
+        linear-gradient(to top, rgba(0,31,69,0.86) 8%, rgba(0,87,184,0.25) 55%, rgba(0,31,69,0.62) 100%),
         url('hero-sailing.jpg') center center / cover no-repeat;
+      color: white;
     }
 
     .hero-inner {
       width: 100%;
       max-width: var(--max);
       margin: 0 auto;
-      padding: 40px 20px 70px;
+      padding: 48px 20px 72px;
     }
 
     .eyebrow {
@@ -69,19 +73,18 @@
     }
 
     .hero h1 {
-      font-size: clamp(3rem, 8vw, 6.2rem);
-      line-height: 0.95;
-      margin: 0 0 18px;
+      margin: 0 0 14px;
+      font-size: clamp(3rem, 8vw, 6rem);
+      line-height: 0.94;
       text-transform: uppercase;
-      max-width: 950px;
-      color: white;
+      max-width: 980px;
     }
 
     .hero p {
       max-width: 760px;
-      color: #f4fbff;
-      font-size: 1.1rem;
       margin: 0 0 28px;
+      color: #eef8ff;
+      font-size: 1.12rem;
     }
 
     .hero-actions {
@@ -96,16 +99,21 @@
       border-radius: 999px;
       font-weight: bold;
       font-size: 0.96rem;
-      transition: 0.2s ease;
+      transition: transform 0.18s ease, box-shadow 0.18s ease, background 0.18s ease;
+    }
+
+    .btn:hover {
+      transform: translateY(-2px);
     }
 
     .btn-primary {
-      background: #00aeef;
+      background: var(--accent-soft);
       color: white;
+      box-shadow: 0 10px 22px rgba(0, 174, 239, 0.28);
     }
 
     .btn-secondary {
-      border: 1px solid rgba(255,255,255,0.55);
+      border: 1px solid rgba(255,255,255,0.58);
       color: white;
       background: transparent;
     }
@@ -114,8 +122,8 @@
       position: sticky;
       top: 0;
       z-index: 50;
-      background: rgba(255,255,255,0.94);
-      backdrop-filter: blur(8px);
+      background: rgba(255,255,255,0.95);
+      backdrop-filter: blur(10px);
       border-bottom: 1px solid var(--line);
     }
 
@@ -135,16 +143,17 @@
       letter-spacing: 0.08em;
       font-size: 0.9rem;
       color: var(--text);
+      white-space: nowrap;
     }
 
     .nav {
       display: flex;
-      gap: 18px;
       flex-wrap: wrap;
+      gap: 18px;
     }
 
     .nav a {
-      color: #002b5c;
+      color: var(--text);
       font-size: 0.94rem;
       font-weight: bold;
     }
@@ -152,7 +161,7 @@
     .section {
       max-width: var(--max);
       margin: 0 auto;
-      padding: 72px 20px;
+      padding: 74px 20px;
     }
 
     .section + .section {
@@ -169,7 +178,7 @@
     }
 
     .section h2 {
-      font-size: clamp(2rem, 5vw, 3.5rem);
+      font-size: clamp(2rem, 5vw, 3.3rem);
       line-height: 1.05;
       text-transform: uppercase;
       margin: 0 0 18px;
@@ -178,7 +187,7 @@
 
     .lead {
       max-width: 860px;
-      font-size: 1.1rem;
+      font-size: 1.08rem;
       color: var(--text);
       margin-bottom: 28px;
     }
@@ -194,22 +203,35 @@
       align-items: start;
     }
 
-    .cards {
+    .cards-3 {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       gap: 18px;
     }
 
+    .cards-2 {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 18px;
+    }
+
     .card {
-      background: #ffffff;
+      background: var(--panel);
       border: 1px solid var(--line);
+      border-radius: var(--radius);
       padding: 24px;
-      box-shadow: 0 10px 24px rgba(0, 43, 92, 0.06);
+      box-shadow: var(--shadow);
+      transition: transform 0.18s ease, box-shadow 0.18s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 16px 34px rgba(0, 43, 92, 0.11);
     }
 
     .card h3 {
       margin: 0 0 10px;
-      font-size: 1.1rem;
+      font-size: 1.08rem;
       text-transform: uppercase;
       color: var(--text);
     }
@@ -220,18 +242,20 @@
     }
 
     .statement h3,
-    .statement p {
+    .statement p,
+    .statement li {
       color: white;
     }
 
     .timeline {
       display: grid;
       gap: 18px;
+      margin-top: 12px;
     }
 
     .timeline-item {
       display: grid;
-      grid-template-columns: 140px 1fr;
+      grid-template-columns: 145px 1fr;
       gap: 18px;
       padding: 18px 0;
       border-top: 1px solid var(--line);
@@ -247,34 +271,14 @@
       font-weight: bold;
       text-transform: uppercase;
       letter-spacing: 0.08em;
-      font-size: 0.9rem;
+      font-size: 0.92rem;
     }
 
     .timeline-item h3 {
       margin: 0 0 8px;
       text-transform: uppercase;
-      font-size: 1.06rem;
+      font-size: 1.05rem;
       color: var(--text);
-    }
-
-    .roots-grid {
-      display: grid;
-      grid-template-columns: 0.95fr 1.05fr;
-      gap: 28px;
-      align-items: center;
-    }
-
-    .image-frame {
-      background: #ffffff;
-      border: 1px solid var(--line);
-      padding: 14px;
-      box-shadow: 0 10px 24px rgba(0, 43, 92, 0.08);
-    }
-
-    .image-caption {
-      margin-top: 10px;
-      font-size: 0.9rem;
-      color: var(--muted);
     }
 
     .list {
@@ -287,19 +291,26 @@
       color: var(--text);
     }
 
-    .flag-grid {
+    .country-grid {
       display: grid;
       grid-template-columns: repeat(4, 1fr);
       gap: 14px;
       margin-top: 24px;
     }
 
-    .flag-card {
-      background: #ffffff;
+    .country-card {
+      background: white;
       border: 1px solid var(--line);
+      border-radius: 16px;
       padding: 16px;
       text-align: center;
       box-shadow: 0 8px 18px rgba(0, 43, 92, 0.05);
+      transition: transform 0.18s ease, box-shadow 0.18s ease;
+    }
+
+    .country-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 24px rgba(0, 43, 92, 0.10);
     }
 
     .flag {
@@ -307,11 +318,99 @@
       margin-bottom: 8px;
     }
 
-    .flag-card span {
+    .country-card span {
       display: block;
       font-weight: bold;
       color: var(--text);
-      font-size: 0.95rem;
+      font-size: 0.94rem;
+    }
+
+    .roots-grid {
+      display: grid;
+      grid-template-columns: 0.95fr 1.05fr;
+      gap: 28px;
+      align-items: center;
+    }
+
+    .image-frame {
+      background: #ffffff;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      padding: 14px;
+      box-shadow: var(--shadow);
+    }
+
+    .image-frame img {
+      border-radius: 12px;
+      width: 100%;
+      height: auto;
+    }
+
+    .image-caption {
+      margin-top: 10px;
+      font-size: 0.9rem;
+      color: var(--muted);
+    }
+
+    .scroller-wrap {
+      margin-top: 24px;
+    }
+
+    .scroller {
+      display: grid;
+      grid-auto-flow: column;
+      grid-auto-columns: minmax(280px, 360px);
+      gap: 18px;
+      overflow-x: auto;
+      padding-bottom: 8px;
+      scroll-snap-type: x proximity;
+    }
+
+    .scroller::-webkit-scrollbar {
+      height: 10px;
+    }
+
+    .scroller::-webkit-scrollbar-thumb {
+      background: #c7d8e8;
+      border-radius: 999px;
+    }
+
+    .scroll-card {
+      scroll-snap-align: start;
+      background: white;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      overflow: hidden;
+      box-shadow: var(--shadow);
+      min-height: 240px;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .scroll-card .media {
+      height: 190px;
+      background: linear-gradient(135deg, #d9edf9, #eef7fd);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--accent);
+      font-weight: bold;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      font-size: 0.86rem;
+      padding: 18px;
+      text-align: center;
+    }
+
+    .scroll-card .copy {
+      padding: 18px;
+    }
+
+    .scroll-card h3 {
+      margin: 0 0 8px;
+      font-size: 1rem;
+      text-transform: uppercase;
+      color: var(--text);
     }
 
     .sources-grid {
@@ -321,8 +420,9 @@
     }
 
     .source-card {
-      background: #f4f6f8;
+      background: var(--bg-soft);
       border: 1px solid var(--line);
+      border-radius: var(--radius);
       padding: 22px;
     }
 
@@ -345,8 +445,9 @@
     }
 
     .contact-box {
-      background: #f4f6f8;
+      background: var(--bg-soft);
       border: 1px solid var(--line);
+      border-radius: var(--radius);
       padding: 26px;
     }
 
@@ -363,12 +464,13 @@
       font-size: 0.92rem;
     }
 
-    @media (max-width: 950px) {
+    @media (max-width: 980px) {
       .split,
       .roots-grid,
-      .cards,
+      .cards-3,
+      .cards-2,
       .sources-grid,
-      .flag-grid {
+      .country-grid {
         grid-template-columns: 1fr;
       }
 
@@ -380,8 +482,7 @@
 
     @media (max-width: 720px) {
       .hero {
-        min-height: 84vh;
-        align-items: end;
+        min-height: 82vh;
       }
 
       .topbar-inner {
@@ -394,16 +495,20 @@
       }
 
       .section {
-        padding: 56px 20px;
+        padding: 58px 20px;
       }
 
       .hero-inner {
-        padding: 40px 20px 50px;
+        padding: 40px 20px 52px;
       }
 
       .hero p,
       .lead {
         font-size: 1rem;
+      }
+
+      .scroller {
+        grid-auto-columns: minmax(260px, 86vw);
       }
     }
   </style>
@@ -415,11 +520,11 @@
       <div class="eyebrow">Olympian • International Sailing Coach • Program Leader</div>
       <h1>Florencia Cerutti</h1>
       <p>
-        From Olympic competition to international coaching and long-term sailing program leadership across South America, Europe, and the United States.
+        From Olympic competition to international coaching, athlete development, coach education, and long-term sailing program leadership across multiple high-performance environments.
       </p>
       <div class="hero-actions">
         <a class="btn btn-primary" href="#biography">Explore Career</a>
-        <a class="btn btn-secondary" href="#contact">Get in Touch</a>
+        <a class="btn btn-secondary" href="#sources">Verified Sources</a>
       </div>
     </div>
   </section>
@@ -431,7 +536,9 @@
         <a href="#biography">Biography</a>
         <a href="#timeline">Timeline</a>
         <a href="#leadership">Leadership</a>
+        <a href="#development">Development</a>
         <a href="#international">International</a>
+        <a href="#archive">Archive</a>
         <a href="#roots">Roots</a>
         <a href="#sources">Sources</a>
         <a href="#contact">Contact</a>
@@ -441,9 +548,9 @@
 
   <section class="section" id="biography">
     <div class="section-label">Biography</div>
-    <h2>Olympian. Coach. Program Builder.</h2>
+    <h2>Olympian. Coach. Leader.</h2>
     <p class="lead">
-      Florencia Cerutti is an Olympian and internationally recognized sailing coach with extensive experience in high-performance athlete development, competitive team leadership, and sailing program growth.
+      Florencia Cerutti is an Olympian and internationally recognized sailing coach with extensive experience in high-performance athlete development, competitive team leadership, coach education, and long-term program growth.
     </p>
 
     <div class="split">
@@ -452,13 +559,13 @@
           Born in Buenos Aires, Argentina, Cerutti built her athletic career in Olympic single-handed classes and represented Paraguay at the 2008 Olympic Games in Beijing, becoming the first Paraguayan woman to compete in Olympic sailing.
         </p>
         <p>
-          Throughout her competitive career, she achieved important results in South American and international regattas, establishing herself as a respected athlete in elite racing environments.
+          Throughout her competitive career, she achieved major continental results and established herself as a respected athlete in South American and international sailing environments.
         </p>
         <p>
-          After her Olympic campaign, she transitioned into coaching and leadership roles, working with clubs, federations, development programs, and high-performance sailing environments across Europe and the United States.
+          After her Olympic campaign, she moved to Barcelona and began an international coaching career that expanded across clubs, federations, development programs, and high-performance sailing environments in Europe, the Americas, and beyond.
         </p>
         <p>
-          Her work extends beyond on-the-water coaching. Cerutti has also led long-term sailing programs, supported athlete pathways, supervised staff, coordinated regatta logistics, and contributed to sustainable growth within competitive sailing organizations.
+          Her work extends beyond on-the-water coaching. Cerutti has led racing programs, supported athlete pathways, trained and mentored coaches, coordinated regatta logistics, and contributed to the long-term growth of competitive sailing structures.
         </p>
         <p>
           She currently serves as Head Coach and Assistant Sailing Director at Norfolk Yacht & Country Club in Virginia.
@@ -468,7 +575,7 @@
       <div class="card statement">
         <h3>Professional Identity</h3>
         <p>
-          Florencia Cerutti’s career is built on three pillars: elite athletic experience, international coaching expertise, and long-term sailing program leadership.
+          Florencia Cerutti’s career is built on four pillars: elite athletic experience, international coaching expertise, coach education, and long-term sailing program leadership.
         </p>
       </div>
     </div>
@@ -478,7 +585,7 @@
     <div class="section-label">Snapshot</div>
     <h2>Career at a Glance</h2>
 
-    <div class="cards">
+    <div class="cards-3">
       <div class="card">
         <h3>Olympic Athlete</h3>
         <p>
@@ -489,14 +596,14 @@
       <div class="card">
         <h3>International Coach</h3>
         <p>
-          Built a coaching career across South America, Europe, and the United States in both youth and high-performance environments.
+          Built a coaching career across clubs, federations, youth programs, and high-performance environments in multiple countries.
         </p>
       </div>
 
       <div class="card">
         <h3>Program Leader</h3>
         <p>
-          Experienced in athlete development, staff supervision, fleet oversight, planning, operations, and sustainable program growth.
+          Experienced in athlete development, coach education, staff leadership, operations, planning, and sustainable program growth.
         </p>
       </div>
     </div>
@@ -511,11 +618,21 @@
 
     <div class="timeline">
       <div class="timeline-item">
-        <div class="timeline-year">Athletic Career</div>
+        <div class="timeline-year">1982</div>
         <div>
-          <h3>International Racing Pathway</h3>
+          <h3>Born in Buenos Aires, Argentina</h3>
           <p class="muted">
-            Developed a competitive career through South American and international regattas in classes including Laser Radial and Europe.
+            Beginning of a life closely connected to sailing and to her Paraguayan family roots.
+          </p>
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-year">Youth Years</div>
+        <div>
+          <h3>Early Sailing Development in Europe</h3>
+          <p class="muted">
+            Competed in Optimist in Europe during her youth and developed the early foundations of her racing career.
           </p>
         </div>
       </div>
@@ -525,7 +642,7 @@
         <div>
           <h3>Pan American Games Bronze Medal</h3>
           <p class="muted">
-            Reached the podium at a major continental event, reinforcing her place among the top sailors in the region.
+            Won bronze in the Women’s Laser Radial event at a major continental championship.
           </p>
         </div>
       </div>
@@ -541,41 +658,91 @@
       </div>
 
       <div class="timeline-item">
-        <div class="timeline-year">Post-Olympic</div>
+        <div class="timeline-year">2009–2013</div>
         <div>
-          <h3>Transition into Coaching</h3>
+          <h3>Head Coach – Club Nàutic Salou, Spain</h3>
           <p class="muted">
-            Began building an international coaching career in Europe, supporting youth sailors, racing teams, and development programs.
+            Continued building her coaching career in Europe while working with youth sailors and competitive Laser programs.
           </p>
         </div>
       </div>
 
       <div class="timeline-item">
-        <div class="timeline-year">Europe</div>
+        <div class="timeline-year">2014</div>
         <div>
-          <h3>Club and Federation Coaching</h3>
+          <h3>Coach – World Sailing Emerging Nations Program</h3>
           <p class="muted">
-            Worked in professional coaching environments connected to clubs and federations in Spain and Switzerland.
+            Worked within an international development environment connected to World Sailing.
           </p>
         </div>
       </div>
 
       <div class="timeline-item">
-        <div class="timeline-year">United States</div>
+        <div class="timeline-year">2015</div>
         <div>
-          <h3>Program Development & Leadership</h3>
+          <h3>Laser Coach – Société Nautique de Genève, Switzerland</h3>
           <p class="muted">
-            Expanded her role into long-term program building, operations, planning, and athlete pathway design.
+            Coached within one of Europe’s strongest sailing environments.
           </p>
         </div>
       </div>
 
       <div class="timeline-item">
-        <div class="timeline-year">Current</div>
+        <div class="timeline-year">2016</div>
         <div>
-          <h3>Head Coach & Assistant Sailing Director</h3>
+          <h3>Laser Coach – Catalan Sailing Federation, Spain</h3>
           <p class="muted">
-            Leads youth and competitive sailing programs at Norfolk Yacht & Country Club in Virginia.
+            Worked with structured athlete development pathways and federation-level coaching.
+          </p>
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-year">2017</div>
+        <div>
+          <h3>Youth Laser National Coach – Swiss Sailing Federation</h3>
+          <p class="muted">
+            Supported high-performance youth development within the Swiss national system.
+          </p>
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-year">2021–2023</div>
+        <div>
+          <h3>Single-Handed Program Director & Coach – Chicago Yacht Club, USA</h3>
+          <p class="muted">
+            Led the development and growth of youth and adult single-handed programs, combining coaching, operations, staff supervision, and long-term planning.
+          </p>
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-year">2023</div>
+        <div>
+          <h3>Team USA Coach – European Championships</h3>
+          <p class="muted">
+            Selected as Team USA coach for the European Championships through US Opti Sailing / USODA.
+          </p>
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-year">2024</div>
+        <div>
+          <h3>Olympic Coaching Environment – Paris 2024 Cycle</h3>
+          <p class="muted">
+            Coaching work connected to the Olympic campaign of Dolores Moreira.
+          </p>
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-year">2024–Present</div>
+        <div>
+          <h3>Head Coach & Assistant Sailing Director – Norfolk Yacht & Country Club, USA</h3>
+          <p class="muted">
+            Leads youth and competitive sailing programs while contributing to broader program structure and athlete development.
           </p>
         </div>
       </div>
@@ -584,7 +751,7 @@
 
   <section class="section" id="leadership">
     <div class="section-label">Leadership</div>
-    <h2>Coaching & Program Leadership</h2>
+    <h2>Coaching, Leadership & Coach Education</h2>
 
     <div class="split">
       <div>
@@ -596,9 +763,9 @@
           <li>Youth development pathways and competitive team progression</li>
           <li>Training, clinic, and regatta schedule design</li>
           <li>Staff supervision and coaching team coordination</li>
+          <li>Coach education, training methodologies, and mentoring of coaching staff</li>
           <li>Fleet oversight, logistics, and operational planning</li>
-          <li>Safety systems and program structure</li>
-          <li>Sustainable growth through athlete and community development</li>
+          <li>Safety systems and long-term program structure</li>
         </ul>
       </div>
 
@@ -608,8 +775,42 @@
           Her coaching philosophy combines technical excellence, resilience, tactical intelligence, and long-term athlete growth.
         </p>
         <p>
-          Cerutti builds environments where performance and character develop side by side.
+          Cerutti builds environments where performance, responsibility, and leadership develop side by side.
         </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="development">
+    <div class="section-label">Development</div>
+    <h2>Athlete & Program Development</h2>
+
+    <div class="split">
+      <div>
+        <p class="lead">
+          Cerutti has played an important role in the development and leadership of competitive sailing programs, combining high-performance coaching with long-term athlete development strategies.
+        </p>
+        <p>
+          Her work has included designing training structures, expanding youth racing programs, supporting athlete progression pathways, and strengthening competitive culture within club and federation environments.
+        </p>
+        <p>
+          In addition to athlete coaching, she has contributed to the education and mentorship of sailing coaches, sharing technical knowledge and training methodologies to improve consistency across coaching teams.
+        </p>
+        <p>
+          This combined focus on athlete development and coach education has helped build stronger sailing programs and sustainable pathways for competitive sailors.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>Areas of Focus</h3>
+        <ul class="list">
+          <li>Athlete development pathways</li>
+          <li>Youth racing team growth</li>
+          <li>Coach education and mentorship</li>
+          <li>High-performance training structures</li>
+          <li>Competitive program design</li>
+          <li>Long-term program sustainability</li>
+        </ul>
       </div>
     </div>
   </section>
@@ -618,41 +819,117 @@
     <div class="section-label">International Experience</div>
     <h2>Global Coaching Footprint</h2>
     <p class="lead">
-      Cerutti’s sailing and coaching career has unfolded across multiple international environments, reflecting a broad understanding of athlete development, club culture, and competitive sailing systems.
+      Cerutti’s international framework extends across clubs, federations, teams, clinics, camps, regattas, and athlete development environments in multiple regions of the world.
     </p>
 
-    <div class="flag-grid">
-      <div class="flag-card">
-        <div class="flag">🇦🇷</div>
-        <span>Argentina</span>
+    <div class="cards-2">
+      <div class="card">
+        <h3>Athletic Representation</h3>
+        <ul class="list">
+          <li>Argentina</li>
+          <li>Paraguay</li>
+        </ul>
       </div>
-      <div class="flag-card">
-        <div class="flag">🇵🇾</div>
-        <span>Paraguay</span>
+
+      <div class="card">
+        <h3>International Coaching & Professional Work</h3>
+        <p class="muted">
+          Countries connected to coaching, camps, training environments, federations, athlete support, and program work.
+        </p>
       </div>
-      <div class="flag-card">
-        <div class="flag">🇪🇸</div>
-        <span>Spain</span>
-      </div>
-      <div class="flag-card">
-        <div class="flag">🇨🇭</div>
-        <span>Switzerland</span>
-      </div>
-      <div class="flag-card">
-        <div class="flag">🇺🇸</div>
-        <span>United States</span>
-      </div>
-      <div class="flag-card">
-        <div class="flag">🇫🇷</div>
-        <span>France</span>
-      </div>
-      <div class="flag-card">
-        <div class="flag">🇬🇧</div>
-        <span>United Kingdom</span>
-      </div>
-      <div class="flag-card">
-        <div class="flag">🇩🇪</div>
-        <span>Germany</span>
+    </div>
+
+    <div class="country-grid">
+      <div class="country-card"><div class="flag">🇦🇷</div><span>Argentina</span></div>
+      <div class="country-card"><div class="flag">🇪🇸</div><span>Spain</span></div>
+      <div class="country-card"><div class="flag">🇨🇭</div><span>Switzerland</span></div>
+      <div class="country-card"><div class="flag">🇺🇸</div><span>United States</span></div>
+
+      <div class="country-card"><div class="flag">🇨🇦</div><span>Canada</span></div>
+      <div class="country-card"><div class="flag">🇲🇽</div><span>Mexico</span></div>
+      <div class="country-card"><div class="flag">🇨🇼</div><span>Curaçao</span></div>
+      <div class="country-card"><div class="flag">🇪🇨</div><span>Ecuador</span></div>
+
+      <div class="country-card"><div class="flag">🇬🇧</div><span>United Kingdom</span></div>
+      <div class="country-card"><div class="flag">🇮🇸</div><span>Iceland</span></div>
+      <div class="country-card"><div class="flag">🇳🇴</div><span>Norway</span></div>
+      <div class="country-card"><div class="flag">🇩🇪</div><span>Germany</span></div>
+
+      <div class="country-card"><div class="flag">🇫🇮</div><span>Finland</span></div>
+      <div class="country-card"><div class="flag">🇮🇱</div><span>Israel</span></div>
+      <div class="country-card"><div class="flag">🇹🇭</div><span>Thailand</span></div>
+      <div class="country-card"><div class="flag">🇲🇾</div><span>Malaysia</span></div>
+
+      <div class="country-card"><div class="flag">🇵🇭</div><span>Philippines</span></div>
+      <div class="country-card"><div class="flag">🇵🇬</div><span>Papua New Guinea</span></div>
+      <div class="country-card"><div class="flag">🇨🇰</div><span>Cook Islands</span></div>
+    </div>
+  </section>
+
+  <section class="section" id="archive">
+    <div class="section-label">Visual Archive</div>
+    <h2>Olympic Archive & Coaching in Action</h2>
+    <p class="lead">
+      A visual record of Olympic campaigns, international coaching environments, athlete development, media coverage, and current leadership.
+    </p>
+
+    <div class="scroller-wrap">
+      <div class="scroller">
+        <div class="scroll-card">
+          <div class="media">Olympic Archive</div>
+          <div class="copy">
+            <h3>Pre-Olympic Press</h3>
+            <p class="muted">Newspaper clippings, campaign articles, and media coverage leading up to the Olympic Games.</p>
+          </div>
+        </div>
+
+        <div class="scroll-card">
+          <div class="media">Beijing 2008</div>
+          <div class="copy">
+            <h3>Olympic Games</h3>
+            <p class="muted">Photos from the Beijing Olympic Games and official competition environment.</p>
+          </div>
+        </div>
+
+        <div class="scroll-card">
+          <div class="media">Campaign Years</div>
+          <div class="copy">
+            <h3>Road to the Games</h3>
+            <p class="muted">Training, preparation, and moments from the period leading into the Olympic campaign.</p>
+          </div>
+        </div>
+
+        <div class="scroll-card">
+          <div class="media">Coaching in Action</div>
+          <div class="copy">
+            <h3>On-the-Water Coaching</h3>
+            <p class="muted">Images of athlete coaching, race support, and technical work on the water.</p>
+          </div>
+        </div>
+
+        <div class="scroll-card">
+          <div class="media">International Teams</div>
+          <div class="copy">
+            <h3>Programs & Athletes</h3>
+            <p class="muted">Team photos and coaching environments in Switzerland, Spain, federation programs, and international camps.</p>
+          </div>
+        </div>
+
+        <div class="scroll-card">
+          <div class="media">Current Leadership</div>
+          <div class="copy">
+            <h3>Current Role</h3>
+            <p class="muted">Magazine features, team photos, and current leadership material from Norfolk Yacht & Country Club and recent Olympic-cycle coaching work.</p>
+          </div>
+        </div>
+
+        <div class="scroll-card">
+          <div class="media">Awards & Milestones</div>
+          <div class="copy">
+            <h3>Medals & Recognition</h3>
+            <p class="muted">A visual record of medals, podiums, and meaningful career milestones.</p>
+          </div>
+        </div>
       </div>
     </div>
   </section>
@@ -687,12 +964,12 @@
     <div class="section-label">Verified Sources</div>
     <h2>Public References & Records</h2>
     <p class="lead">
-      The following public sources support key parts of Florencia Cerutti’s athletic and professional background.
+      The following public references support key parts of Florencia Cerutti’s athletic and professional background.
     </p>
 
     <div class="sources-grid">
       <div class="source-card">
-        <h3>Official Databases</h3>
+        <h3>Official Athlete Databases</h3>
         <ul>
           <li><a href="https://www.olympedia.org/athletes/117784" target="_blank">Olympedia Athlete Profile</a></li>
           <li><a href="https://olympics.com/en/athletes/florencia-cerutti-bogado" target="_blank">Olympics.com Athlete Profile</a></li>
@@ -733,8 +1010,8 @@
     <h2>Professional Contact</h2>
 
     <div class="contact-box">
-      <p>For coaching opportunities, speaking engagements, collaborations, or professional inquiries, please get in touch.</p>
-      <p><strong>Email:</strong> add-your-email-here</p>
+      <p>For coaching opportunities, collaborations, speaking engagements, or professional inquiries, please get in touch.</p>
+      <p><strong>Email:</strong> coachflorc@gmail.com</p>
       <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/flor-cerutti-sailing-coach" target="_blank">flor-cerutti-sailing-coach</a></p>
     </div>
   </section>
