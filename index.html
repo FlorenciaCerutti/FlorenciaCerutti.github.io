@@ -119,62 +119,64 @@
     }
 
     .topbar {
-      position: sticky;
-      top: 0;
-      z-index: 50;
-      background: rgba(255,255,255,0.95);
-      backdrop-filter: blur(10px);
-      border-bottom: 1px solid var(--line);
-    }
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: rgba(255,255,255,0.96);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--line);
+}
 
     .topbar-inner {
-      max-width: var(--max);
-      margin: 0 auto;
-      padding: 16px 20px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 20px;
-    }
+  max-width: var(--max);
+  margin: 0 auto;
+  padding: 14px 20px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
 
-    .brand {
-      font-weight: bold;
-      text-transform: uppercase;
-      letter-spacing: 0.08em;
-      font-size: 0.9rem;
-      color: var(--text);
-      white-space: nowrap;
-    }
+    .topbar-inner-center {
+  justify-content: center;
+}
 
-    .nav {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 18px;
-    }
+   .nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 18px;
+}
 
-    .nav a {
-      color: var(--text);
-      font-size: 0.94rem;
-      font-weight: bold;
-    }
+.nav-compact {
+  gap: 14px;
+  justify-content: center;
+}
+
+   .nav a {
+  color: var(--text);
+  font-size: 0.82rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
 
     .intro-band {
-      background: var(--navy-deep);
-      color: white;
-    }
+  background: linear-gradient(180deg, #072955, #0a3367);
+  color: white;
+  border-top: 1px solid rgba(255,255,255,0.06);
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+}
 
     .intro-band .section {
-      padding: 34px 20px;
-    }
+  padding: 26px 20px;
+}
 
     .intro-band p {
-      margin: 0;
-      max-width: 980px;
-      font-size: 1.18rem;
-      line-height: 1.55;
-      color: #eef8ff;
-    }
-
+  margin: 0 auto;
+  max-width: 900px;
+  font-size: 1.06rem;
+  line-height: 1.6;
+  color: #eef8ff;
+}
     .section {
       max-width: var(--max);
       margin: 0 auto;
@@ -187,9 +189,17 @@
       padding: 60px 20px;
     }
 
-    .section + .section {
-      border-top: 1px solid var(--line);
-    }
+.section,
+.section-tight {
+  border-top: 1px solid var(--line);
+}
+
+.hero + .topbar + .intro-band + .section,
+.hero + .topbar + .intro-band + .section-tight,
+.intro-band + .section,
+.intro-band + .section-tight {
+  border-top: 0;
+}
 
     .section-label {
       color: var(--accent-soft);
@@ -568,24 +578,19 @@
     </div>
   </section>
 
-  <div class="topbar">
-    <div class="topbar-inner">
-      <div class="brand">Florencia Cerutti, OLY</div>
-      <nav class="nav">
-        <a href="#biography">Biography</a>
-        <a href="#current-role">Current Role</a>
-        <a href="#timeline">Timeline</a>
-        <a href="#leadership">Leadership</a>
-        <a href="#development">Development</a>
-        <a href="#education">Education</a>
-        <a href="#international">International</a>
-        <a href="#archive">Archive</a>
-        <a href="#roots">Roots</a>
-        <a href="#sources">Sources</a>
-        <a href="#contact">Contact</a>
-      </nav>
-    </div>
+ <div class="topbar">
+  <div class="topbar-inner topbar-inner-center">
+    <nav class="nav nav-compact">
+      <a href="#biography">Biography</a>
+      <a href="#current-role">Current Role</a>
+      <a href="#timeline">Timeline</a>
+      <a href="#international">International</a>
+      <a href="#archive">Archive</a>
+      <a href="#sources">Sources</a>
+      <a href="#contact">Contact</a>
+    </nav>
   </div>
+</div>
 
   <section class="intro-band">
     <div class="section">
