@@ -46,8 +46,47 @@
       display: block;
     }
 
+    .topbar {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      background: rgba(255,255,255,0.96);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .topbar-inner {
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 14px 20px;
+      display: flex;
+      align-items: center;
+    }
+
+    .topbar-inner-center {
+      justify-content: center;
+    }
+
+    .nav {
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    .nav-compact {
+      gap: 14px;
+      justify-content: center;
+    }
+
+    .nav a {
+      color: var(--text);
+      font-size: 0.82rem;
+      font-weight: bold;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+    }
+
     .hero {
-      min-height: 72vh;
+      min-height: 76vh;
       display: flex;
       align-items: flex-end;
       background:
@@ -118,45 +157,6 @@
       background: transparent;
     }
 
-    .topbar {
-      position: sticky;
-      top: 0;
-      z-index: 50;
-      background: rgba(255,255,255,0.96);
-      backdrop-filter: blur(10px);
-      border-bottom: 1px solid var(--line);
-    }
-
-    .topbar-inner {
-      max-width: var(--max);
-      margin: 0 auto;
-      padding: 14px 20px;
-      display: flex;
-      align-items: center;
-    }
-
-    .topbar-inner-center {
-      justify-content: center;
-    }
-
-    .nav {
-      display: flex;
-      flex-wrap: wrap;
-    }
-
-    .nav-compact {
-      gap: 14px;
-      justify-content: center;
-    }
-
-    .nav a {
-      color: var(--text);
-      font-size: 0.82rem;
-      font-weight: bold;
-      text-transform: uppercase;
-      letter-spacing: 0.04em;
-    }
-
     .intro-band {
       background: linear-gradient(180deg, #072955, #0a3367);
       color: white;
@@ -194,8 +194,12 @@
       border-top: 1px solid var(--line);
     }
 
-    .hero + .topbar + .intro-band + .section,
-    .hero + .topbar + .intro-band + .section-tight,
+    .topbar + .hero {
+      border-top: 0;
+    }
+
+    .hero + .section,
+    .hero + .section-tight,
     .intro-band + .section,
     .intro-band + .section-tight {
       border-top: 0;
@@ -564,20 +568,6 @@
 </head>
 <body>
 
-  <section class="hero">
-    <div class="hero-inner">
-      <div class="eyebrow">Olympian • International Sailing Coach • Program Leader</div>
-      <h1>Florencia Cerutti, OLY</h1>
-      <p>
-        Olympian, international sailing coach, and program leader with experience in athlete development, coach education, and competitive sailing structures across multiple high-performance environments.
-      </p>
-      <div class="hero-actions">
-        <a class="btn btn-primary" href="#biography">Explore Career</a>
-        <a class="btn btn-secondary" href="#current-role">Current Role</a>
-      </div>
-    </div>
-  </section>
-
   <div class="topbar">
     <div class="topbar-inner topbar-inner-center">
       <nav class="nav nav-compact">
@@ -591,11 +581,17 @@
     </div>
   </div>
 
-  <section class="intro-band">
-    <div class="section">
+  <section class="hero">
+    <div class="hero-inner">
+      <div class="eyebrow">Olympian • International Sailing Coach • Program Leader</div>
+      <h1>Florencia Cerutti</h1>
       <p>
-        From Olympic competition to international coaching, athlete development, coach education, and long-term sailing program leadership, Florencia Cerutti has built a career that connects elite sport with sustainable competitive environments.
+        Olympian, international sailing coach, and program leader with experience in athlete development, coach education, and competitive sailing structures across multiple high-performance environments.
       </p>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="#biography">Explore Career</a>
+        <a class="btn btn-secondary" href="#current-role">Current Role</a>
+      </div>
     </div>
   </section>
 
@@ -635,6 +631,14 @@
     </div>
   </section>
 
+  <section class="intro-band">
+    <div class="section">
+      <p>
+        From Olympic competition to international coaching, athlete development, coach education, and long-term sailing program leadership, Florencia Cerutti has built a career that connects elite sport with sustainable competitive environments.
+      </p>
+    </div>
+  </section>
+
   <section class="section-tight">
     <div class="section-label">Overview</div>
     <h2>Career at a Glance</h2>
@@ -670,7 +674,7 @@
     <div class="split-wide">
       <div>
         <p class="lead">
-          Florencia Cerutti, OLY, currently serves as Head Coach and Assistant Sailing Director at Norfolk Yacht & Country Club in Virginia, United States.
+          Florencia Cerutti currently serves as Head Coach and Assistant Sailing Director at Norfolk Yacht & Country Club in Virginia, United States.
         </p>
 
         <p>
@@ -1120,7 +1124,7 @@
     <h2>Professional Contact</h2>
 
     <div class="contact-box">
-      <p>For coaching opportunities, collaborations, speaking engagements, or professional inquiries related to Florencia Cerutti, OLY, please get in touch.</p>
+      <p>For coaching opportunities, collaborations, speaking engagements, or professional inquiries related to Florencia Cerutti, please get in touch.</p>
       <p><strong>Email:</strong> coachflorc@gmail.com</p>
       <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/flor-cerutti-sailing-coach" target="_blank">flor-cerutti-sailing-coach</a></p>
     </div>
