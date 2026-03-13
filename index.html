@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Florencia Cerutti | Olympian & International Sailing Coach</title>
+  <title>Florencia Cerutti, OLY | Olympian & International Sailing Coach</title>
   <meta name="description" content="Official portfolio website of Florencia Cerutti, Olympian, international sailing coach, coach educator, and sailing program leader." />
 
   <style>
@@ -16,7 +16,6 @@
       --bg: #ffffff;
       --bg-soft: #f4f7fb;
       --panel: #ffffff;
-      --panel-soft: #f7fafc;
       --text: #002b5c;
       --muted: #5f6f82;
       --line: #d7e2ec;
@@ -61,18 +60,12 @@
       padding: 14px 20px;
       display: flex;
       align-items: center;
-    }
-
-    .topbar-inner-center {
       justify-content: center;
     }
 
     .nav {
       display: flex;
       flex-wrap: wrap;
-    }
-
-    .nav-compact {
       gap: 14px;
       justify-content: center;
     }
@@ -138,7 +131,7 @@
       border-radius: 999px;
       font-weight: bold;
       font-size: 0.96rem;
-      transition: transform 0.18s ease, box-shadow 0.18s ease, background 0.18s ease;
+      transition: transform 0.18s ease, box-shadow 0.18s ease;
     }
 
     .btn:hover {
@@ -157,47 +150,21 @@
       background: transparent;
     }
 
-    .intro-band {
-      background: linear-gradient(180deg, #072955, #0a3367);
-      color: white;
-      border-top: 1px solid rgba(255,255,255,0.06);
-      border-bottom: 1px solid rgba(255,255,255,0.06);
-    }
-
-    .intro-band .section {
-      padding: 26px 20px;
-      border-top: 0;
-    }
-
-    .intro-band p {
-      margin: 0 auto;
-      max-width: 900px;
-      font-size: 1.06rem;
-      line-height: 1.6;
-      color: #eef8ff;
-    }
-
     .section {
       max-width: var(--max);
       margin: 0 auto;
       padding: 74px 20px;
+      border-top: 1px solid var(--line);
     }
 
     .section-tight {
       max-width: var(--max);
       margin: 0 auto;
       padding: 60px 20px;
-    }
-
-    .section,
-    .section-tight {
       border-top: 1px solid var(--line);
     }
 
-    .topbar + .hero {
-      border-top: 0;
-    }
-
+    .topbar + .hero,
     .hero + .section,
     .hero + .section-tight,
     .intro-band + .section,
@@ -290,6 +257,26 @@
     .statement p,
     .statement li {
       color: white;
+    }
+
+    .intro-band {
+      background: linear-gradient(180deg, #072955, #0a3367);
+      color: white;
+      border-top: 1px solid rgba(255,255,255,0.06);
+      border-bottom: 1px solid rgba(255,255,255,0.06);
+    }
+
+    .intro-band .section {
+      padding: 26px 20px;
+      border-top: 0;
+    }
+
+    .intro-band p {
+      margin: 0 auto;
+      max-width: 900px;
+      font-size: 1.06rem;
+      line-height: 1.6;
+      color: #eef8ff;
     }
 
     .timeline {
@@ -541,10 +528,6 @@
         align-items: center;
       }
 
-      .nav-compact {
-        justify-content: center;
-      }
-
       .section,
       .section-tight {
         padding: 58px 20px;
@@ -569,9 +552,10 @@
 <body>
 
   <div class="topbar">
-    <div class="topbar-inner topbar-inner-center">
-      <nav class="nav nav-compact">
+    <div class="topbar-inner">
+      <nav class="nav">
         <a href="#biography">Biography</a>
+        <a href="#olympic-athlete">Olympic Athlete</a>
         <a href="#current-role">Current Role</a>
         <a href="#timeline">Timeline</a>
         <a href="#international">International</a>
@@ -590,7 +574,7 @@
       </p>
       <div class="hero-actions">
         <a class="btn btn-primary" href="#biography">Explore Career</a>
-        <a class="btn btn-secondary" href="#current-role">Current Role</a>
+        <a class="btn btn-secondary" href="#olympic-athlete">Olympic Athlete</a>
       </div>
     </div>
   </section>
@@ -631,6 +615,53 @@
     </div>
   </section>
 
+  <section class="section" id="olympic-athlete">
+    <div class="section-label">Olympic Athlete</div>
+    <h2>Olympic Athlete Career</h2>
+
+    <div class="split-wide">
+      <div>
+        <p class="lead">
+          Florencia Cerutti represented Paraguay in the Laser Radial class at the 2008 Olympic Games in Beijing, becoming the first Paraguayan woman to compete in Olympic sailing.
+        </p>
+
+        <p>
+          Her Olympic campaign was the result of years of international competition in single-handed dinghy classes, where she developed the technical precision, tactical awareness, and resilience that later shaped her coaching philosophy.
+        </p>
+
+        <p>
+          Throughout her competitive career, Cerutti raced internationally across Europe and the Americas, building experience in elite regattas and major championships.
+        </p>
+
+        <p>
+          Her athletic journey includes a bronze medal at the 2003 Pan American Games and a broader competitive pathway that established the foundations for her transition into international coaching.
+        </p>
+      </div>
+
+      <div class="cards-2">
+        <div class="card">
+          <h3>Beijing 2008 Olympic Games</h3>
+          <p>Represented Paraguay in the Laser Radial class.</p>
+        </div>
+
+        <div class="card">
+          <h3>Pan American Games</h3>
+          <p>Bronze medal in the Women’s Laser Radial event.</p>
+        </div>
+
+        <div class="card">
+          <h3>International Racing</h3>
+          <p>Competitive experience across Europe and the Americas in Olympic classes.</p>
+        </div>
+
+        <div class="card">
+          <h3>Transition to Coaching</h3>
+          <p>Elite athletic experience that later informed her coaching methodology and athlete development approach.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <section class="intro-band">
     <div class="section">
       <p>
@@ -646,23 +677,17 @@
     <div class="cards-3">
       <div class="card">
         <h3>Olympic Athlete</h3>
-        <p>
-          Represented Paraguay in the Laser Radial event at the Beijing 2008 Olympic Games.
-        </p>
+        <p>Represented Paraguay in the Laser Radial event at the Beijing 2008 Olympic Games.</p>
       </div>
 
       <div class="card">
         <h3>International Coach</h3>
-        <p>
-          Built a coaching career across clubs, federations, youth programs, national teams, and high-performance environments.
-        </p>
+        <p>Built a coaching career across clubs, federations, youth programs, national teams, and high-performance environments.</p>
       </div>
 
       <div class="card">
         <h3>Program Leader</h3>
-        <p>
-          Experienced in athlete development, coach mentorship, staff leadership, operations, planning, and sustainable program growth.
-        </p>
+        <p>Experienced in athlete development, coach mentorship, staff leadership, operations, planning, and sustainable program growth.</p>
       </div>
     </div>
   </section>
@@ -711,9 +736,7 @@
         <div class="timeline-year">1982</div>
         <div>
           <h3>Born in Buenos Aires, Argentina</h3>
-          <p class="muted">
-            Beginning of a life closely connected to sailing and to her Paraguayan family roots.
-          </p>
+          <p class="muted">Beginning of a life closely connected to sailing and to her Paraguayan family roots.</p>
         </div>
       </div>
 
@@ -721,9 +744,7 @@
         <div class="timeline-year">Youth Years</div>
         <div>
           <h3>Early Sailing Development in Europe</h3>
-          <p class="muted">
-            Competed in Optimist in Europe during her youth and developed the early foundations of her racing career.
-          </p>
+          <p class="muted">Competed in Optimist in Europe during her youth and developed the early foundations of her racing career.</p>
         </div>
       </div>
 
@@ -731,9 +752,7 @@
         <div class="timeline-year">2003</div>
         <div>
           <h3>Pan American Games Bronze Medal</h3>
-          <p class="muted">
-            Won bronze in the Women’s Laser Radial event at a major continental championship.
-          </p>
+          <p class="muted">Won bronze in the Women’s Laser Radial event at a major continental championship.</p>
         </div>
       </div>
 
@@ -741,9 +760,7 @@
         <div class="timeline-year">2008</div>
         <div>
           <h3>Olympic Games – Beijing</h3>
-          <p class="muted">
-            Represented Paraguay in the Laser Radial class and became the first Paraguayan woman to compete in Olympic sailing.
-          </p>
+          <p class="muted">Represented Paraguay in the Laser Radial class and became the first Paraguayan woman to compete in Olympic sailing.</p>
         </div>
       </div>
 
@@ -751,9 +768,7 @@
         <div class="timeline-year">2009–2013</div>
         <div>
           <h3>Head Coach – Club Nàutic Salou, Spain</h3>
-          <p class="muted">
-            Continued building her coaching career in Europe while working with youth sailors and competitive Laser programs.
-          </p>
+          <p class="muted">Continued building her coaching career in Europe while working with youth sailors and competitive Laser programs.</p>
         </div>
       </div>
 
@@ -761,9 +776,7 @@
         <div class="timeline-year">2014</div>
         <div>
           <h3>Coach – World Sailing Emerging Nations Program</h3>
-          <p class="muted">
-            Worked within an international development environment connected to World Sailing.
-          </p>
+          <p class="muted">Worked within an international development environment connected to World Sailing.</p>
         </div>
       </div>
 
@@ -771,9 +784,7 @@
         <div class="timeline-year">2015</div>
         <div>
           <h3>Laser Coach – Société Nautique de Genève, Switzerland</h3>
-          <p class="muted">
-            Coached within one of Europe’s strongest sailing environments.
-          </p>
+          <p class="muted">Coached within one of Europe’s strongest sailing environments.</p>
         </div>
       </div>
 
@@ -781,9 +792,7 @@
         <div class="timeline-year">2016</div>
         <div>
           <h3>Laser Coach – Catalan Sailing Federation, Spain</h3>
-          <p class="muted">
-            Worked with structured athlete development pathways and federation-level coaching.
-          </p>
+          <p class="muted">Worked with structured athlete development pathways and federation-level coaching.</p>
         </div>
       </div>
 
@@ -791,9 +800,7 @@
         <div class="timeline-year">2017</div>
         <div>
           <h3>Youth Laser National Coach – Swiss Sailing Federation</h3>
-          <p class="muted">
-            Supported high-performance youth development within the Swiss national system.
-          </p>
+          <p class="muted">Supported high-performance youth development within the Swiss national system.</p>
         </div>
       </div>
 
@@ -801,9 +808,7 @@
         <div class="timeline-year">2021–2023</div>
         <div>
           <h3>Single-Handed Program Director & Coach – Chicago Yacht Club, USA</h3>
-          <p class="muted">
-            Led the development and growth of youth and adult single-handed programs, combining coaching, operations, staff supervision, and long-term planning.
-          </p>
+          <p class="muted">Led the development and growth of youth and adult single-handed programs, combining coaching, operations, staff supervision, and long-term planning.</p>
         </div>
       </div>
 
@@ -811,9 +816,7 @@
         <div class="timeline-year">2023</div>
         <div>
           <h3>Team USA Coach – European Championships</h3>
-          <p class="muted">
-            Selected as Team USA coach for the European Championships through US Opti Sailing / USODA.
-          </p>
+          <p class="muted">Selected as Team USA coach for the European Championships through US Opti Sailing / USODA.</p>
         </div>
       </div>
 
@@ -821,9 +824,7 @@
         <div class="timeline-year">2024</div>
         <div>
           <h3>Olympic Coaching Environment – Paris 2024 Cycle</h3>
-          <p class="muted">
-            Coaching work connected to the Olympic campaign of Dolores Moreira.
-          </p>
+          <p class="muted">Coaching work connected to the Olympic campaign of Dolores Moreira.</p>
         </div>
       </div>
 
@@ -831,9 +832,7 @@
         <div class="timeline-year">2024–Present</div>
         <div>
           <h3>Head Coach & Assistant Sailing Director – Norfolk Yacht & Country Club, USA</h3>
-          <p class="muted">
-            Leads youth and competitive sailing programs while contributing to broader program structure and athlete development.
-          </p>
+          <p class="muted">Leads youth and competitive sailing programs while contributing to broader program structure and athlete development.</p>
         </div>
       </div>
     </div>
@@ -951,9 +950,7 @@
 
       <div class="card">
         <h3>International Coaching & Professional Work</h3>
-        <p class="muted">
-          Countries connected to coaching, camps, training environments, federations, athlete support, and program work.
-        </p>
+        <p class="muted">Countries connected to coaching, camps, training environments, federations, athlete support, and program work.</p>
       </div>
     </div>
 
@@ -981,8 +978,8 @@
   </section>
 
   <section class="section" id="archive">
-    <div class="section-label">Visual Archive</div>
-    <h2>Olympic Archive & Coaching in Action</h2>
+    <div class="section-label">Archive</div>
+    <h2>Visual Archive</h2>
     <p class="lead">
       A visual record of Olympic campaigns, international coaching environments, athlete development, media coverage, and current leadership.
     </p>
@@ -990,58 +987,42 @@
     <div class="scroller-wrap">
       <div class="scroller">
         <div class="scroll-card">
-          <div class="media">Olympic Archive</div>
+          <div class="media">Olympic Athlete Archive</div>
           <div class="copy">
-            <h3>Pre-Olympic Press</h3>
-            <p class="muted">Newspaper clippings, campaign articles, and media coverage leading up to the Olympic Games.</p>
+            <h3>Beijing 2008 & Racing Career</h3>
+            <p class="muted">Press clippings, campaign images, Olympic participation, and competitive milestones.</p>
           </div>
         </div>
 
         <div class="scroll-card">
-          <div class="media">Beijing 2008</div>
+          <div class="media">Olympic Coach Archive</div>
           <div class="copy">
-            <h3>Olympic Games</h3>
-            <p class="muted">Photos from the Olympic Games and official competition environment.</p>
+            <h3>Paris 2024 Cycle</h3>
+            <p class="muted">Images and materials linked to Olympic coaching work in the ILCA 6 class.</p>
           </div>
         </div>
 
         <div class="scroll-card">
-          <div class="media">Campaign Years</div>
+          <div class="media">International Coaching</div>
           <div class="copy">
-            <h3>Road to the Games</h3>
-            <p class="muted">Training, preparation, and moments from the period leading into the Olympic campaign.</p>
+            <h3>Teams & Programs</h3>
+            <p class="muted">International athletes, national federations, clubs, and development environments.</p>
           </div>
         </div>
 
         <div class="scroll-card">
           <div class="media">Coaching in Action</div>
           <div class="copy">
-            <h3>On-the-Water Coaching</h3>
-            <p class="muted">Images of athlete coaching, race support, and technical work on the water.</p>
+            <h3>On the Water</h3>
+            <p class="muted">Coach boat support, technical work, race coaching, and athlete supervision.</p>
           </div>
         </div>
 
         <div class="scroll-card">
-          <div class="media">International Teams</div>
+          <div class="media">Press & Media</div>
           <div class="copy">
-            <h3>Programs & Athletes</h3>
-            <p class="muted">Team photos and coaching environments in Switzerland, Spain, federation programs, and international camps.</p>
-          </div>
-        </div>
-
-        <div class="scroll-card">
-          <div class="media">Current Leadership</div>
-          <div class="copy">
-            <h3>Current Role</h3>
-            <p class="muted">Magazine features, team photos, and current leadership material from Norfolk Yacht & Country Club and recent Olympic-cycle coaching work.</p>
-          </div>
-        </div>
-
-        <div class="scroll-card">
-          <div class="media">Awards & Milestones</div>
-          <div class="copy">
-            <h3>Medals & Recognition</h3>
-            <p class="muted">A visual record of medals, podiums, and meaningful career milestones.</p>
+            <h3>Articles & Coverage</h3>
+            <p class="muted">Magazine features, online press, interviews, and public coverage across different stages of her career.</p>
           </div>
         </div>
       </div>
@@ -1096,7 +1077,7 @@
         <ul>
           <li><a href="https://www.sailing.org/2008/08/08/lone-sailors-carry-hopes-of-their-country/" target="_blank">World Sailing – Olympic Coverage</a></li>
           <li><a href="https://www.swiss-sailing-team.ch/le-talent-pool-2020-annonce/" target="_blank">Swiss Sailing Team – Talent Pool</a></li>
-          <li><a href="https://www.usoda.org/" target="_blank">USODA</a></li>
+          <li><a href="https://www.facebook.com/story.php/?story_fbid=658208806335079&id=100064378971586/" target="_blank">USODA</a></li>
         </ul>
       </div>
 
@@ -1125,7 +1106,7 @@
 
     <div class="contact-box">
       <p>For coaching opportunities, collaborations, speaking engagements, or professional inquiries related to Florencia Cerutti, please get in touch.</p>
-      <p><strong>Email:</strong> add-your-email-here</p>
+      <p><strong>Email:</strong> coachflorc@gmail.com</p>
       <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/flor-cerutti-sailing-coach" target="_blank">flor-cerutti-sailing-coach</a></p>
     </div>
   </section>
