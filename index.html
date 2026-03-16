@@ -279,40 +279,134 @@
       color: #eef8ff;
     }
 
-    .timeline {
-      display: grid;
-      gap: 0;
-      max-width: 980px;
-    }
+    .timeline{
+max-width:980px;
+margin-top:18px;
+position:relative;
+padding-left:0;
+}
 
-    .timeline-item {
-      display: grid;
-      grid-template-columns: 160px 1fr;
-      gap: 24px;
-      padding: 22px 0;
-      border-top: 1px solid var(--line);
-    }
+    .timeline::before{
+content:"";
+position:absolute;
+left:132px;
+top:0;
+bottom:0;
+width:2px;
+background:var(--line);
+}
+
+.timeline-item{
+display:grid;
+grid-template-columns:110px 1fr;
+gap:34px;
+padding:26px 0;
+position:relative;
+border-top:0;
+}
 
     .timeline-item:first-child {
       border-top: 0;
       padding-top: 0;
     }
 
-    .timeline-year {
-      color: var(--accent);
-      font-weight: bold;
-      text-transform: uppercase;
-      letter-spacing: 0.08em;
-      font-size: 0.92rem;
-      padding-top: 4px;
-    }
+    .timeline-year{
+color:var(--accent);
+font-weight:bold;
+text-transform:uppercase;
+letter-spacing:0.08em;
+font-size:0.9rem;
+text-align:right;
+padding-top:6px;
+position:relative;
+}
 
-    .timeline-item h3 {
-      margin: 0 0 8px;
-      text-transform: uppercase;
-      font-size: 1.08rem;
-      color: var(--text);
-    }
+.timeline-year::after{
+content:"";
+position:absolute;
+right:-23px;
+top:12px;
+width:12px;
+height:12px;
+border-radius:50%;
+background:white;
+border:3px solid var(--accent);
+z-index:2;
+}
+
+    .timeline-content{
+display:flex;
+gap:18px;
+align-items:flex-start;
+background:white;
+border:1px solid var(--line);
+border-radius:16px;
+padding:18px 20px;
+box-shadow:0 8px 20px rgba(0,43,92,0.05);
+transition:transform 0.18s ease, box-shadow 0.18s ease;
+}
+
+.timeline-content:hover{
+transform:translateY(-3px);
+box-shadow:0 14px 28px rgba(0,43,92,0.1);
+}
+
+.timeline-logo{
+width:42px;
+height:42px;
+object-fit:contain;
+flex:0 0 42px;
+margin-top:2px;
+filter:grayscale(100%);
+opacity:0.9;
+}
+
+.timeline-content h3{
+margin:0 0 8px;
+text-transform:uppercase;
+font-size:1.03rem;
+color:var(--text);
+}
+
+@media (max-width: 980px){
+.timeline::before{
+left:16px;
+}
+
+.timeline-item{
+grid-template-columns:1fr;
+gap:12px;
+padding:20px 0 20px 34px;
+}
+
+.timeline-year{
+text-align:left;
+padding-top:0;
+}
+
+.timeline-year::after{
+left:-24px;
+right:auto;
+top:4px;
+}
+}
+
+@media (max-width: 720px){
+.timeline-content{
+padding:16px;
+gap:14px;
+}
+
+.timeline-logo{
+width:36px;
+height:36px;
+flex:0 0 36px;
+}
+
+.timeline-content h3{
+font-size:0.98rem;
+}
+}
 
     .list {
       margin: 0;
@@ -729,55 +823,267 @@
 
     <div class="timeline">
 
-  <div class="timeline-item">
-    <div class="timeline-year">Early Years</div>
-    <div>
-      <h3>Optimist Racing</h3>
-      <p class="muted">
-        Cerutti began sailing in the Optimist class during her childhood, building the technical and tactical foundations that launched her competitive sailing career.
-      </p>
-    </div>
-  </div>
+<!-- Optimist -->
 
-  <div class="timeline-item">
-    <div class="timeline-year">Youth International Career</div>
-    <div>
-      <h3>Europa Class Competition</h3>
-      <p class="muted">
-        Transitioned to the Europa class, the women’s Olympic single-handed dinghy of that era, competing internationally and establishing herself within high-level Olympic class racing circuits.
-      </p>
-    </div>
-  </div>
+<div class="timeline-item">
+<div class="timeline-year">Early Years</div>
 
-  <div class="timeline-item">
-    <div class="timeline-year">Early 2000s</div>
-    <div>
-      <h3>Laser Radial International Campaign</h3>
-      <p class="muted">
-        Moved into the Laser Radial class and began competing internationally in Olympic-class events across Europe and the Americas.
-      </p>
-    </div>
-  </div>
+<div class="timeline-content">
 
-  <div class="timeline-item">
-    <div class="timeline-year">2003</div>
-    <div>
-      <h3>Pan American Games Bronze Medal</h3>
-      <p class="muted">
-        Won bronze in the Women’s Laser Radial event at the Pan American Games, marking a major milestone in her international competitive career.
-      </p>
-    </div>
-  </div>
+<img src="assets/logos/optimist.svg" class="timeline-logo" alt="Optimist class logo">
 
-  <div class="timeline-item">
-    <div class="timeline-year">2008</div>
-    <div>
-      <h3>Olympic Games – Beijing</h3>
-      <p class="muted">
-        Represented Paraguay in the Laser Radial class at the 2008 Olympic Games, becoming the first Paraguayan woman to compete in Olympic sailing.
-      </p>
-    </div>
-  </div>
+<div>
+<h3>Optimist Racing</h3>
+<p class="muted">
+Cerutti began sailing in the Optimist class during her childhood, developing the technical foundations and competitive mindset that launched her racing career.
+</p>
+</div>
+
+</div>
+</div>
+
+
+<!-- Europa -->
+
+<div class="timeline-item">
+<div class="timeline-year">Youth Career</div>
+
+<div class="timeline-content">
+
+<img src="assets/logos/europa-class.svg" class="timeline-logo" alt="Europa class logo">
+
+<div>
+<h3>Europa Class Competition</h3>
+<p class="muted">
+Transitioned to the Europa class, the women's Olympic single-handed dinghy of that era, competing internationally and establishing herself within Olympic class racing circuits.
+</p>
+</div>
+
+</div>
+</div>
+
+
+<!-- PanAm -->
+
+<div class="timeline-item">
+<div class="timeline-year">2003</div>
+
+<div class="timeline-content">
+
+<img src="assets/logos/panam.svg" class="timeline-logo" alt="Pan American Games logo">
+
+<div>
+<h3>Pan American Games Bronze Medal</h3>
+<p class="muted">
+Won bronze in the Women's Laser Radial event at the Pan American Games, marking a major milestone in her international competitive career.
+</p>
+</div>
+
+</div>
+</div>
+
+
+<!-- Olympics -->
+
+<div class="timeline-item">
+<div class="timeline-year">2008</div>
+
+<div class="timeline-content">
+
+<img src="assets/logos/olympics.svg" class="timeline-logo" alt="Olympic Games logo">
+
+<div>
+<h3>Olympic Games – Beijing</h3>
+<p class="muted">
+Represented Paraguay in the Laser Radial class at the Beijing 2008 Olympic Games, becoming the first Paraguayan woman to compete in Olympic sailing.
+</p>
+</div>
+
+</div>
+</div>
+
+
+<!-- Salou -->
+
+<div class="timeline-item">
+<div class="timeline-year">2009–2013</div>
+
+<div class="timeline-content">
+
+<img src="assets/logos/salou.png" class="timeline-logo" alt="Club Nàutic Salou logo">
+
+<div>
+<h3>Head Coach – Club Nàutic Salou</h3>
+<p class="muted">
+Began her international coaching career in Spain, coaching youth sailors and competitive Laser fleets while building experience in structured European sailing programs.
+</p>
+</div>
+
+</div>
+</div>
+
+
+<!-- World Sailing -->
+
+<div class="timeline-item">
+<div class="timeline-year">2014</div>
+
+<div class="timeline-content">
+
+<img src="assets/logos/world-sailing.svg" class="timeline-logo" alt="World Sailing logo">
+
+<div>
+<h3>World Sailing Emerging Nations Program</h3>
+<p class="muted">
+Worked with the World Sailing Emerging Nations Program supporting the development of sailors and national federations from emerging sailing countries.
+</p>
+</div>
+
+</div>
+</div>
+
+
+<!-- Geneva -->
+
+<div class="timeline-item">
+<div class="timeline-year">2015</div>
+
+<div class="timeline-content">
+
+<img src="assets/logos/geneva.png" class="timeline-logo" alt="Société Nautique de Genève logo">
+
+<div>
+<h3>Laser Coach – Société Nautique de Genève</h3>
+<p class="muted">
+Joined one of Europe's strongest sailing clubs, coaching Laser sailors within a competitive Swiss high-performance environment.
+</p>
+</div>
+
+</div>
+</div>
+
+
+<!-- Catalan Federation -->
+
+<div class="timeline-item">
+<div class="timeline-year">2016</div>
+
+<div class="timeline-content">
+
+<img src="assets/logos/catalan-federation.png" class="timeline-logo" alt="Catalan Sailing Federation logo">
+
+<div>
+<h3>Laser Coach – Catalan Sailing Federation</h3>
+<p class="muted">
+Worked within the Catalan high-performance sailing structure supporting youth Laser sailors competing nationally and internationally.
+</p>
+</div>
+
+</div>
+</div>
+
+
+<!-- Swiss Sailing -->
+
+<div class="timeline-item">
+<div class="timeline-year">2017</div>
+
+<div class="timeline-content">
+
+<img src="assets/logos/swiss-sailing.svg" class="timeline-logo" alt="Swiss Sailing logo">
+
+<div>
+<h3>Youth Laser National Coach – Swiss Sailing</h3>
+<p class="muted">
+Supported youth athletes within the Swiss national Laser development pathway, preparing sailors progressing toward elite international competition.
+</p>
+</div>
+
+</div>
+</div>
+
+
+<!-- Chicago YC -->
+
+<div class="timeline-item">
+<div class="timeline-year">2021–2023</div>
+
+<div class="timeline-content">
+
+<img src="assets/logos/chicago-yacht-club.svg" class="timeline-logo" alt="Chicago Yacht Club logo">
+
+<div>
+<h3>Single-Handed Program Director – Chicago Yacht Club</h3>
+<p class="muted">
+Led the development of competitive single-handed sailing programs combining athlete coaching, coach mentoring, and structured program leadership.
+</p>
+</div>
+
+</div>
+</div>
+
+
+<!-- USODA -->
+
+<div class="timeline-item">
+<div class="timeline-year">2023</div>
+
+<div class="timeline-content">
+
+<img src="assets/logos/usoda.png" class="timeline-logo" alt="US Opti Sailing logo">
+
+<div>
+<h3>Team USA Coach – International Championship</h3>
+<p class="muted">
+Selected as Team USA coach through US Opti Sailing supporting American sailors competing in international Optimist championships.
+</p>
+</div>
+
+</div>
+</div>
+
+
+<!-- Olympic Coaching -->
+
+<div class="timeline-item">
+<div class="timeline-year">2024</div>
+
+<div class="timeline-content">
+
+<img src="assets/logos/olympics.svg" class="timeline-logo" alt="Olympic Games logo">
+
+<div>
+<h3>Olympic Campaign Coaching – Paris 2024 Cycle</h3>
+<p class="muted">
+Worked within the Olympic campaign environment of ILCA 6 sailor Dolores Moreira during the Paris Olympic cycle.
+</p>
+</div>
+
+</div>
+</div>
+
+
+<!-- NYCC -->
+
+<div class="timeline-item">
+<div class="timeline-year">2024–Present</div>
+
+<div class="timeline-content">
+
+<img src="assets/logos/nycc.svg" class="timeline-logo" alt="Norfolk Yacht & Country Club logo">
+
+<div>
+<h3>Head Coach & Assistant Sailing Director – Norfolk Yacht & Country Club</h3>
+<p class="muted">
+Leads youth racing programs and contributes to the development of competitive sailing structures at one of Coastal Virginia’s leading yacht clubs.
+</p>
+</div>
+
+</div>
+</div>
+
+
+</div>
 
   <section class="section" id="leadership">
     <div class="section-label">Leadership</div>
