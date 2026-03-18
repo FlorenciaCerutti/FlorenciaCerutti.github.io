@@ -302,6 +302,7 @@ gap:34px;
 padding:26px 0;
 position:relative;
 border-top:0;
+align-items:center;
 }
 
     .timeline-item:first-child {
@@ -316,15 +317,18 @@ text-transform:uppercase;
 letter-spacing:0.08em;
 font-size:0.9rem;
 text-align:right;
-padding-top:6px;
 position:relative;
+align-items:center;
+justify-content:flex-end;
+min-height:100%;
 }
 
 .timeline-year::after{
 content:"";
 position:absolute;
 right:-23px;
-top:12px;
+top:50%px;
+transform:translateY(-50%);
 width:12px;
 height:12px;
 border-radius:50%;
