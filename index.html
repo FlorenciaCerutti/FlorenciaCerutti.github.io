@@ -299,10 +299,9 @@ background:var(--line);
 display:grid;
 grid-template-columns:110px 1fr;
 gap:34px;
-padding:22px 0;
+padding:26px 0;
 position:relative;
 border-top:0;
-align-items:center;
 }
 
     .timeline-year{
@@ -312,19 +311,15 @@ text-transform:uppercase;
 letter-spacing:0.08em;
 font-size:0.9rem;
 text-align:right;
+      paddingtop-top:6px;
 position:relative;
-display:flex;
-      align-items:center;
-      justify-content:flex-end;
-      min-height:100%
 }
 
 .timeline-year::after{
 content:"";
 position:absolute;
 right:-23px;
-top:50%;
-transform:translateY(-50%);
+top:12px;
 width:12px;
 height:12px;
 border-radius:50%;
@@ -337,7 +332,8 @@ Transition:background 0.2s ease, transform 0.2s ease;
     .timeline-item:hover .timeline-year::after{
 background:var(--accent);
       transform:translateY(-50%) scale(1.1);
-      
+   }
+    
     .timeline-content{
 display:flex;
 gap:18px;
