@@ -659,6 +659,156 @@ font-size:0.98rem;
         grid-auto-columns: minmax(260px, 86vw);
       }
     }
+    .archive-expanded {
+  margin-top: 28px;
+  padding: 28px;
+  border: 1px solid rgba(20, 44, 80, 0.16);
+  border-radius: 18px;
+  background: #ffffff;
+  box-shadow: 0 18px 45px rgba(15, 35, 70, 0.06);
+}
+
+.archive-expanded-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 22px;
+}
+
+.archive-expanded-header h3 {
+  margin: 6px 0 0;
+  font-size: 28px;
+  color: #071735;
+}
+
+.archive-feature {
+  display: grid;
+  grid-template-columns: 1.25fr 1fr;
+  gap: 32px;
+  align-items: center;
+}
+
+.archive-feature-image img {
+  width: 100%;
+  height: 420px;
+  object-fit: cover;
+  border-radius: 14px;
+  display: block;
+}
+
+.archive-feature-copy .eyebrow {
+  color: #17427a;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 12px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.archive-feature-copy h3 {
+  font-size: 30px;
+  line-height: 1.15;
+  margin: 0 0 8px;
+  color: #071735;
+}
+
+.archive-feature-copy .strong {
+  font-weight: 700;
+  color: #071735;
+  margin-bottom: 18px;
+}
+
+.archive-feature-copy p {
+  color: #273449;
+  line-height: 1.65;
+}
+
+.archive-links {
+  display: grid;
+  gap: 10px;
+  margin-top: 22px;
+}
+
+.archive-links a {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 13px 16px;
+  border: 1px solid rgba(23, 66, 122, 0.45);
+  border-radius: 8px;
+  color: #0b3470;
+  font-weight: 700;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 13px;
+  letter-spacing: 0.03em;
+}
+
+.archive-links a::after {
+  content: "↗";
+  font-size: 15px;
+}
+
+.archive-links a:hover {
+  background: rgba(23, 66, 122, 0.06);
+}
+
+.archive-gallery-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+  margin-top: 30px;
+  padding-top: 24px;
+  border-top: 1px solid rgba(20, 44, 80, 0.14);
+}
+
+.archive-gallery-row h4 {
+  margin: 0 0 14px;
+  color: #071735;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  font-size: 14px;
+}
+
+.mini-gallery {
+  display: flex;
+  gap: 12px;
+  overflow-x: auto;
+  padding-bottom: 10px;
+}
+
+.mini-gallery img {
+  width: 165px;
+  height: 110px;
+  object-fit: cover;
+  border-radius: 10px;
+  flex: 0 0 auto;
+  border: 1px solid rgba(20, 44, 80, 0.12);
+}
+
+.press-gallery img {
+  width: 130px;
+  height: 150px;
+}
+
+@media (max-width: 900px) {
+  .archive-feature,
+  .archive-gallery-row {
+    grid-template-columns: 1fr;
+  }
+
+  .archive-feature-image img {
+    height: 300px;
+  }
+
+  .archive-expanded {
+    padding: 20px;
+  }
+
+  .archive-feature-copy h3 {
+    font-size: 24px;
+  }
+}
   </style>
 </head>
 <body>
@@ -1291,6 +1441,60 @@ Leads youth racing programs and contributes to the development of competitive sa
         </div>
       </div>
     </div>
+    <div id="olympic-athlete-archive" class="archive-expanded">
+  <div class="archive-expanded-header">
+    <div>
+      <div class="section-label">Olympic Athlete Archive</div>
+      <h3>Beijing 2008 Olympic Games</h3>
+    </div>
+  </div>
+
+  <div class="archive-feature">
+    <div class="archive-feature-image">
+      <img src="assets/archive/Florencia-Cerutti-2008-Beijing-Olympic-Games-sailing-radial-race-4.webp" alt="Florencia Cerutti sailing at the Beijing 2008 Olympic Games">
+    </div>
+
+    <div class="archive-feature-copy">
+      <div class="eyebrow">Beijing 2008 Olympic Games</div>
+      <h3>Florencia Cerutti - Olympic Participation</h3>
+      <p class="strong">Laser Radial - Representing Paraguay</p>
+      <p>
+        Florencia Cerutti represented Paraguay at the Beijing 2008 Olympic Games in the Laser Radial class,
+        competing among the world's best sailors.
+      </p>
+
+      <div class="archive-links">
+        <a href="https://www.olympics.com/en/video/men-s-and-women-s-sailing-highlights" target="_blank">Olympic Race Video</a>
+        <a href="https://www.olympics.com/en/athletes/florencia-cerutti-bogado" target="_blank">Olympic Profile & Bio</a>
+        <a href="https://www.gettyimages.dk/search/2/image?family=editorial&phrase=Florencia%20Cerutti%20of%20Paraguay" target="_blank">More Official Photos from Beijing 2008</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="archive-gallery-row">
+    <div>
+      <h4>Event Gallery</h4>
+      <div class="mini-gallery">
+        <img src="assets/archive/Florencia-Cerutti-2008-Beijing-Olympic-Games-participation.webp" alt="Florencia Cerutti Beijing 2008 Olympic Games participation">
+        <img src="assets/archive/Florencia-Cerutti-2008-Beijing-Olympic-Games-participation-medal.webp" alt="Florencia Cerutti Beijing 2008 Olympic Games medal ceremony">
+        <img src="assets/archive/Florencia-Cerutti-2008-Beijing-Olympic-Games-sailing-radial-race-2.webp" alt="Florencia Cerutti racing in the Laser Radial class at Beijing 2008">
+        <img src="assets/archive/Florencia-Cerutti-2008-Beijing-Olympic-Games-closing-ceremony-and-ben-ainslie.webp" alt="Florencia Cerutti at the Beijing 2008 closing ceremony">
+        <img src="assets/archive/2008-Laser-Radial-Beijing-Olympic-Athletes-participants.webp" alt="Laser Radial athletes at the Beijing 2008 Olympic Games">
+      </div>
+    </div>
+
+    <div>
+      <h4>Press Clippings</h4>
+      <div class="mini-gallery press-gallery">
+        <img src="assets/press/beijing-2008-gallery-00.webp" alt="Press clipping about Florencia Cerutti Beijing 2008">
+        <img src="assets/press/beijing-2008-gallery-01.webp" alt="Press clipping about Florencia Cerutti Olympic campaign">
+        <img src="assets/press/beijing-2008-gallery-02.webp" alt="Press clipping about Florencia Cerutti sailing career">
+        <img src="assets/press/beijing-2008-gallery-03-page-1.webp" alt="Press clipping page 1 about Beijing 2008">
+        <img src="assets/press/beijing-2008-gallery-04-page-1.webp" alt="Press clipping page 1 about Florencia Cerutti">
+      </div>
+    </div>
+  </div>
+</div>
   </section>
 
   <section class="section" id="roots">
