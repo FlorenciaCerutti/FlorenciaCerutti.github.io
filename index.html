@@ -797,11 +797,12 @@ font-size:0.98rem;
 
 .archive-gallery-row {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
   gap: 32px;
   margin-top: 30px;
   padding-top: 24px;
   border-top: 1px solid rgba(20, 44, 80, 0.14);
+  align-items: start;
 }
 
 .archive-gallery-row h4 {
@@ -814,9 +815,10 @@ font-size:0.98rem;
 
 .gallery-controls {
   display: grid;
-  grid-template-columns: 36px 1fr 36px;
+  grid-template-columns: 34px minmax(0, 1fr) 34px;
   gap: 10px;
   align-items: center;
+  width: 100%;
 }
 
 .gallery-arrow {
@@ -841,6 +843,7 @@ font-size:0.98rem;
   overflow-x: auto;
   padding: 0 8px 10px;
   scroll-behavior: smooth;
+  min-width: 0;
 }
 
 .mini-gallery::-webkit-scrollbar {
