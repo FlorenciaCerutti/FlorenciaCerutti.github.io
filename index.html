@@ -1521,7 +1521,7 @@ Leads youth racing programs and contributes to the development of competitive sa
 
   </div>
 </div>
-    <div id="olympic-athlete-archive" class="archive-expanded archive-visible">
+    <div id="olympic-athlete-archive" class="archive-expanded">
   <div class="archive-expanded-header">
     <div>
       <div class="section-label">Olympic Athlete Archive</div>
@@ -1675,27 +1675,26 @@ Leads youth racing programs and contributes to the development of competitive sa
     © 2026 Florencia Cerutti. All rights reserved.
   </div>
 
-    <script>
+ <script>
   function scrollGallery(id, direction) {
     const gallery = document.getElementById(id);
     if (!gallery) return;
 
     gallery.scrollBy({
-      left: direction * 220,
+      left: direction * 260,
       behavior: 'smooth'
     });
   }
-</script>
 
-<script>
-  function toggleArchive(id) {
-    const archive = document.getElementById(id);
+  const olympicToggle = document.getElementById('olympic-athlete-toggle');
+  const olympicArchive = document.getElementById('olympic-athlete-archive');
 
-    if (!archive) return;
-
-    archive.classList.toggle('archive-visible');
+  if (olympicToggle && olympicArchive) {
+    olympicToggle.addEventListener('click', function () {
+      olympicArchive.classList.toggle('archive-visible');
+    });
   }
-</script>
+</script>   
     
 </body>
 </html>
