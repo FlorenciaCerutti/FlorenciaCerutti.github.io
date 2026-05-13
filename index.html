@@ -870,10 +870,28 @@ font-size:0.98rem;
 }
 
 @media (max-width: 900px) {
-  .archive-feature,
+  .archive-feature {
+    grid-template-columns: 1fr;
+  }
+
+  .archive-feature-image img {
+    height: 300px;
+  }
+
+  .archive-expanded {
+    padding: 20px;
+  }
+
+  .archive-feature-copy h3 {
+    font-size: 24px;
+  }
+}
+
+@media (max-width: 700px) {
   .archive-gallery-row {
     grid-template-columns: 1fr;
   }
+}
 
   .archive-feature-image img {
     height: 300px;
