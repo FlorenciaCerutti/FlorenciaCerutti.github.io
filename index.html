@@ -948,11 +948,44 @@ font-size:0.98rem;
   cursor: pointer !important;
 }
 
+  .archive-card-bg {
+  position: relative;
+  overflow: hidden;
+  background-image:
+    linear-gradient(rgba(7, 23, 53, 0.72), rgba(7, 23, 53, 0.82)),
+    url('assets/archive/Florencia-Cerutti-2008-Beijing-Olympic-Games-sailing-radial-race-4.webp');
+
+  background-size: cover;
+  background-position: center;
+  color: white;
+}
+
+.archive-card-bg h3,
+.archive-card-bg p,
+.archive-card-bg .media {
+  color: white !important;
+}
+
+.archive-card-bg .muted {
+  color: rgba(255,255,255,0.88) !important;
+}
+
+.archive-card-bg .archive-toggle {
+  border-color: rgba(255,255,255,0.35);
+  color: white;
+}
+
+.archive-card-bg .archive-toggle:hover {
+  background: rgba(255,255,255,0.12);
+}
+  
 @media (max-width: 700px) {
   .archive-gallery-row {
     grid-template-columns: 1fr !important;
   }
 }
+
+  
 
   </style>
 </head>
@@ -1557,7 +1590,7 @@ Leads youth racing programs and contributes to the development of competitive sa
       </div>
     </div>
 
-    <div class="scroll-card">
+    <div class="scroll-card archive-card-bg">
       <div class="media">Olympic Coach Archive</div>
       <div class="copy">
         <h3>Paris 2024 Cycle</h3>
