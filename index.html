@@ -862,8 +862,8 @@ font-size:0.98rem;
 }
 
 .press-gallery img {
-  width: 130px;
-  height: 150px;
+  width: 165px;
+  height: 110px;
 }
 
 @media (max-width: 900px) {
@@ -1531,7 +1531,7 @@ Leads youth racing programs and contributes to the development of competitive sa
 
   <div class="archive-feature">
     <div class="archive-feature-image">
-      <img src="assets/archive/Florencia-Cerutti-2008-Beijing-Olympic-Games-sailing-radial-race-4.webp" alt="Florencia Cerutti sailing at the Beijing 2008 Olympic Games">
+     <img id="archive-main-image" src="assets/archive/Florencia-Cerutti-2008-Beijing-Olympic-Games-sailing-radial-race-4.webp" alt="Florencia Cerutti sailing at the Beijing 2008 Olympic Games">
     </div>
 
     <div class="archive-feature-copy">
@@ -1558,11 +1558,13 @@ Leads youth racing programs and contributes to the development of competitive sa
   <button class="gallery-arrow" onclick="scrollGallery('event-gallery', -1)">‹</button>
 
   <div class="mini-gallery" id="event-gallery">
-    <img src="assets/archive/Florencia-Cerutti-2008-Beijing-Olympic-Games-participation.webp" alt="Florencia Cerutti Beijing 2008 Olympic Games participation">
-    <img src="assets/archive/Florencia-Cerutti-2008-Beijing-Olympic-Games-participation-medal.webp" alt="Florencia Cerutti Beijing 2008 Olympic Games medal ceremony">
-    <img src="assets/archive/Florencia-Cerutti-2008-Beijing-Olympic-Games-sailing-radial-race-2.webp" alt="Florencia Cerutti racing in the Laser Radial class at Beijing 2008">
-    <img src="assets/archive/Florencia-Cerutti-2008-Beijing-Olympic-Games-closing-ceremony-and-ben-ainslie.webp" alt="Florencia Cerutti at the Beijing 2008 closing ceremony">
-    <img src="assets/archive/2008-Laser-Radial-Beijing-Olympic-Athletes-participants.webp" alt="Laser Radial athletes at the Beijing 2008 Olympic Games">
+    <img onclick="changeArchiveImage(this)" <img src="assets/archive/Florencia-Cerutti-2008-Beijing-Olympic-Games-participation.webp" alt="Florencia Cerutti Beijing 2008 Olympic Games participation">
+    <img onclick="changeArchiveImage(this)" <img src="assets/archive/Florencia-Cerutti-2008-Beijing-Olympic-Games-participation-medal.webp" alt="Florencia Cerutti Beijing 2008 Olympic Games medal ceremony">
+    <img onclick="changeArchiveImage(this)" <img src="assets/archive/Florencia-Cerutti-2008-Beijing-Olympic-Games-sailing-radial-race-2.webp" alt="Florencia Cerutti racing in the Laser Radial class at Beijing 2008">
+    <img onclick="changeArchiveImage(this)" <img src="assets/archive/Florencia-Cerutti-2008-Beijing-Olympic-Games-closing-ceremony-and-ben-ainslie.webp" alt="Florencia Cerutti at the Beijing 2008 closing ceremony">
+    <img onclick="changeArchiveImage(this)" <img src="assets/archive/2008-Laser-Radial-Beijing-Olympic-Athletes-participants.webp" alt="Laser Radial athletes at the Beijing 2008 Olympic Games">
+    
+    </div>
   </div>
 
   <button class="gallery-arrow" onclick="scrollGallery('event-gallery', 1)">›</button>
@@ -1685,7 +1687,13 @@ Leads youth racing programs and contributes to the development of competitive sa
       behavior: 'smooth'
     });
   }
+function changeArchiveImage(thumbnail) {
+  const mainImage = document.getElementById('archive-main-image');
+  if (!mainImage) return;
 
+  mainImage.src = thumbnail.src;
+  mainImage.alt = thumbnail.alt;
+}
   const olympicToggle = document.getElementById('olympic-athlete-toggle');
   const olympicArchive = document.getElementById('olympic-athlete-archive');
 
