@@ -796,9 +796,9 @@ font-size:0.98rem;
 }
 
 .archive-gallery-row {
-  display: grid;
-  grid-template-columns: 1fr 1fr);
-  gap: 36px;
+  display: grid !important;
+  grid-template-columns: 1fr 1fr !important;
+  gap: 36px !important;
   margin-top: 42px;
   align-items: start;
 }
@@ -1622,45 +1622,45 @@ Leads youth racing programs and contributes to the development of competitive sa
   </div>
 
   <div class="archive-gallery-row">
-    <div class="archive-gallery-block">
-      <h4>Event Gallery</h4>
-      <div class="gallery-controls">
-        <button class="gallery-arrow" onclick="scrollGallery('event-gallery', -1)">‹</button>
 
+  <div class="archive-gallery-block">
+    <h4>Event Gallery</h4>
 
-  <div class="mini-gallery" id="event-gallery">
-    <img onclick="changeArchiveImage(this)" src="assets/archive/Florencia-Cerutti-2008-Beijing-Olympic-Games-sailing-radial-race-4.webp" alt="Florencia Cerutti sailing at the Beijing 2008 Olympic Games">
-    <img onclick="changeArchiveImage(this)" src="assets/archive/Florencia-Cerutti-2008-Beijing-Olympic-Games-participation.webp" alt="Florencia Cerutti Beijing 2008 Olympic Games participation">
-    <img onclick="changeArchiveImage(this)" src="assets/archive/Florencia-Cerutti-2008-Beijing-Olympic-Games-participation-medal.webp" alt="Florencia Cerutti Beijing 2008 Olympic Games medal ceremony">
-    <img onclick="changeArchiveImage(this)" src="assets/archive/Florencia-Cerutti-2008-Beijing-Olympic-Games-sailing-radial-race-2.webp" alt="Florencia Cerutti racing in the Laser Radial class at Beijing 2008">
-    <img onclick="changeArchiveImage(this)" src="assets/archive/Florencia-Cerutti-2008-Beijing-Olympic-Games-closing-ceremony-and-ben-ainslie.webp" alt="Florencia Cerutti at the Beijing 2008 closing ceremony">
-    <img onclick="changeArchiveImage(this)" src="assets/archive/2008-Laser-Radial-Beijing-Olympic-Athletes-participants.webp" alt="Laser Radial athletes at the Beijing 2008 Olympic Games">
-    
+    <div class="gallery-controls">
+      <button class="gallery-arrow" type="button" onclick="scrollGallery('event-gallery', -1)">‹</button>
+
+      <div class="mini-gallery" id="event-gallery">
+        <img onclick="changeArchiveImage(this)" src="assets/archive/Florencia-Cerutti-2008-Beijing-Olympic-Games-sailing-radial-race-4.webp" alt="Florencia Cerutti sailing at Beijing 2008">
+        <img onclick="changeArchiveImage(this)" src="assets/archive/Florencia-Cerutti-2008-Beijing-Olympic-Games-participation.webp" alt="Florencia Cerutti Beijing 2008 Olympic Games participation">
+        <img onclick="changeArchiveImage(this)" src="assets/archive/Florencia-Cerutti-2008-Beijing-Olympic-Games-participation-medal.webp" alt="Florencia Cerutti Beijing 2008 Olympic Games medal ceremony">
+        <img onclick="changeArchiveImage(this)" src="assets/archive/Florencia-Cerutti-2008-Beijing-Olympic-Games-sailing-radial-race-2.webp" alt="Florencia Cerutti racing at Beijing 2008">
+        <img onclick="changeArchiveImage(this)" src="assets/archive/Florencia-Cerutti-2008-Beijing-Olympic-Games-closing-ceremony-and-ben-ainslie.webp" alt="Florencia Cerutti at the Beijing 2008 closing ceremony">
+        <img onclick="changeArchiveImage(this)" src="assets/archive/2008-Laser-Radial-Beijing-Olympic-Athletes-participants.webp" alt="Laser Radial athletes at Beijing 2008">
+      </div>
+
+      <button class="gallery-arrow" type="button" onclick="scrollGallery('event-gallery', 1)">›</button>
     </div>
-        <button class="gallery-arrow" onclick="scrollGallery('event-gallery', 1)">›</button>
   </div>
 
-  
+  <div class="archive-gallery-block">
+    <h4>Press Clippings</h4>
 
+    <div class="gallery-controls">
+      <button class="gallery-arrow" type="button" onclick="scrollGallery('press-gallery', -1)">‹</button>
+
+      <div class="mini-gallery press-gallery" id="press-gallery">
+        <img onclick="changeArchiveImage(this)" src="assets/press/beijing-2008-gallery-00.webp" alt="Press clipping about Florencia Cerutti Beijing 2008">
+        <img onclick="changeArchiveImage(this)" src="assets/press/beijing-2008-gallery-01.webp" alt="Press clipping about Florencia Cerutti Olympic campaign">
+        <img onclick="changeArchiveImage(this)" src="assets/press/beijing-2008-gallery-02.webp" alt="Press clipping about Florencia Cerutti sailing career">
+        <img onclick="changeArchiveImage(this)" src="assets/press/beijing-2008-gallery-03-page-1.webp" alt="Press clipping page 1 about Beijing 2008">
+        <img onclick="changeArchiveImage(this)" src="assets/press/beijing-2008-gallery-04-page-1.webp" alt="Press clipping page 1 about Florencia Cerutti">
+      </div>
+
+      <button class="gallery-arrow" type="button" onclick="scrollGallery('press-gallery', 1)">›</button>
     </div>
-
-   <div class="archive-gallery-block"
-      <h4>Press Clippings</h4>
-      <div class="gallery-controls">
-  <button class="gallery-arrow" onclick="scrollGallery('press-gallery', -1)">‹</button>
-
-  <div class="mini-gallery press-gallery" id="press-gallery">
-    <img onclick="changeArchiveImage(this)" src="assets/press/beijing-2008-gallery-00.webp" alt="Press clipping about Florencia Cerutti Beijing 2008">
-    <img onclick="changeArchiveImage(this)" src="assets/press/beijing-2008-gallery-01.webp" alt="Press clipping about Florencia Cerutti Olympic campaign">
-    <img onclick="changeArchiveImage(this)" src="assets/press/beijing-2008-gallery-02.webp" alt="Press clipping about Florencia Cerutti sailing career">
-    <img onclick="changeArchiveImage(this)" src="assets/press/beijing-2008-gallery-03-page-1.webp" alt="Press clipping page 1 about Beijing 2008">
-    <img onclick="changeArchiveImage(this)" src="assets/press/beijing-2008-gallery-04-page-1.webp" alt="Press clipping page 1 about Florencia Cerutti">
   </div>
 
-  <button class="gallery-arrow" onclick="scrollGallery('press-gallery', 1)">›</button>
 </div>
-    </div>
-
   </section>
 
   <section class="section" id="roots">
