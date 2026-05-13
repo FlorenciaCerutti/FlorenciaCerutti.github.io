@@ -797,11 +797,9 @@ font-size:0.98rem;
 
 .archive-gallery-row {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
-  gap: 32px;
-  margin-top: 30px;
-  padding-top: 24px;
-  border-top: 1px solid rgba(20, 44, 80, 0.14);
+  grid-template-columns: 1fr 1fr);
+  gap: 36px;
+  margin-top: 42px;
   align-items: start;
 }
 
@@ -813,12 +811,18 @@ font-size:0.98rem;
   font-size: 14px;
 }
 
+    .archive-gallery-block h4 {
+  margin: 16px;
+  color: #071735;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 15px;
+}
+
 .gallery-controls {
-  display: grid;
-  grid-template-columns: 34px minmax(0, 1fr) 34px;
-  gap: 10px;
+  display: flex;
   align-items: center;
-  width: 100%;
+  width: 14px;
 }
 
 .gallery-arrow {
