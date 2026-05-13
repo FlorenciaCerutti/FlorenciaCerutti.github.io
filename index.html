@@ -660,6 +660,48 @@ font-size:0.98rem;
       }
     }
     .archive-expanded {
+  display: none;
+}
+
+.archive-visible {
+  display: block;
+  animation: fadeArchive 0.35s ease;
+}
+
+.archive-toggle-btn {
+  margin-top: 18px;
+  background: none;
+  border: none;
+  padding: 0;
+  color: #0b3470;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  cursor: pointer;
+  text-transform: uppercase;
+  font-size: 13px;
+}
+
+.archive-toggle-btn:hover {
+  opacity: 0.72;
+}
+
+.active-archive-card {
+  border-color: rgba(11, 52, 112, 0.4);
+  box-shadow: 0 10px 30px rgba(11, 52, 112, 0.08);
+}
+
+@keyframes fadeArchive {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+    .archive-expanded {
   margin-top: 28px;
   padding: 28px;
   border: 1px solid rgba(20, 44, 80, 0.16);
@@ -1433,11 +1475,12 @@ Leads youth racing programs and contributes to the development of competitive sa
 
     <div class="scroller-wrap">
       <div class="scroller">
-        <div class="scroll-card">
+        <div class="scroll-card active-archive-card">
           <div class="media">Olympic Athlete Archive</div>
           <div class="copy">
             <h3>Beijing 2008 & Racing Career</h3>
             <p class="muted">Press clippings, campaign images, Olympic participation, and competitive milestones.</p>
+            <button class="archive-toggle-btn" onclick="toggleArchive(`olympic-athlete-archive´)">
           </div>
         </div>
 
@@ -1474,7 +1517,7 @@ Leads youth racing programs and contributes to the development of competitive sa
         </div>
       </div>
     </div>
-    <div id="olympic-athlete-archive" class="archive-expanded">
+    <div id="olympic-athlete-archive" class="archive-expanded archive-visible">
   <div class="archive-expanded-header">
     <div>
       <div class="section-label">Olympic Athlete Archive</div>
@@ -1637,6 +1680,16 @@ Leads youth racing programs and contributes to the development of competitive sa
       left: direction * 220,
       behavior: 'smooth'
     });
+  }
+</script>
+
+<script>
+  function toggleArchive(id) {
+    const archive = document.getElementById(id);
+
+    if (!archive) return;
+
+    archive.classList.toggle('archive-visible');
   }
 </script>
     
