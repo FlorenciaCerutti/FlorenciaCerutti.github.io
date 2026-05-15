@@ -977,6 +977,21 @@ font-size:0.98rem;
   color: #ffffff;
 }
 
+ .archive-card-bg::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(7, 23, 53, 0.22);
+  z-index: 1;
+}
+
+.archive-card-bg .media,
+.archive-card-bg .copy {
+  position: relative;
+  z-index: 2;
+}
+   
+
 .archive-card-bg .media,
 .archive-card-bg h3,
 .archive-card-bg p,
