@@ -1113,6 +1113,66 @@ font-size:0.98rem;
   transform: scale(1.06);
 }
 
+.archive-card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  min-height: 640px;
+}
+
+.archive-card-copy {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  padding: 30px 30px 28px;
+}
+
+.archive-card h3 {
+  font-size: 24px;
+  line-height: 1.08;
+  margin-bottom: 18px;
+  letter-spacing: -0.02em;
+}
+
+.archive-card p {
+  flex-grow: 1;
+  font-size: 17px;
+  line-height: 1.7;
+  color: #344256;
+}
+
+.archive-card-image {
+  height: 190px;
+  overflow: hidden;
+}
+
+.archive-card-image img {
+  transition: transform 0.5s ease;
+}
+
+.archive-card:hover .archive-card-image img {
+  transform: scale(1.04);
+}
+
+.archive-toggle-btn {
+  margin-top: 28px;
+  width: 46px;
+  height: 46px;
+  border-radius: 999px;
+  border: none;
+  background: rgba(56, 122, 214, 0.12);
+  color: #0b5fca;
+  font-size: 24px;
+  font-weight: 700;
+  transition: all 0.25s ease;
+}
+
+.archive-toggle-btn:hover {
+  background: #0b5fca;
+  color: white;
+  transform: translateX(3px);
+}
+
 @media (max-width: 1100px) {
   .archive-cards-grid {
     grid-template-columns: repeat(2, minmax(240px, 1fr));
@@ -1727,8 +1787,8 @@ Leads youth racing programs and contributes to the development of competitive sa
       <h3>Beijing 2008 & Racing Career</h3>
 
       <p>
-        Campaign images, Olympic participation,
-        and competitive milestones.
+        Olympic participation, international racing campaigns
+        and elite competitive milestones.
       </p>
 
       <button class="archive-toggle-btn" type="button" id="olympic-athlete-toggle">
@@ -1769,8 +1829,8 @@ Leads youth racing programs and contributes to the development of competitive sa
       <h3>Teams & Programs</h3>
 
       <p>
-        International athletes, national federations,
-        clubs, and development environments.
+        International athletes, federations,
+        clubs, and development programs and on-the-water performance coaching.
       </p>
 
       <button class="archive-toggle-btn" type="button">
@@ -1790,8 +1850,8 @@ Leads youth racing programs and contributes to the development of competitive sa
       <h3>Olympic Qualification Journey</h3>
 
       <p>
-        The international racing pathway, major championships,and milestones
-        that led to the Olympic Games.
+        The international pathway, major championships, and milestones
+        leading to Beijing 2008.
       </p>
 
       <button class="archive-toggle-btn" type="button">
