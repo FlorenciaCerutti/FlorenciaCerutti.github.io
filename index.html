@@ -955,89 +955,58 @@ font-size:0.98rem;
   }
 }
 
-.archive-card-bg {
-  position: relative;
-  overflow: hidden;
-  background-image:
-    linear-gradient(rgba(7, 23, 53, 0.72), rgba(7, 23, 53, 0.82)),
-    url('assets/archive/Florencia-Cerutti-2008-Beijing-Olympic-Games-sailing-radial-race-4.webp');
-
   background-size: cover;
   background-position: center top;
   color: white;
 }
 
+/* Olympic Athlete Archive card background */
+.archive-card-bg {
+  position: relative;
+  overflow: hidden;
+  background-image:
+    linear-gradient(
+      to bottom,
+      rgba(7, 23, 53, 0.86) 0%,
+      rgba(7, 23, 53, 0.68) 35%,
+      rgba(7, 23, 53, 0.82) 100%
+    ),
+    url("assets/archive/Florencia-Cerutti-2008-Beijing-Olympic-Games-sailing-radial-race-4.webp");
+  background-size: cover;
+  background-position: center 28%;
+  color: #ffffff;
+}
+
+.archive-card-bg .media,
 .archive-card-bg h3,
 .archive-card-bg p,
-.archive-card-bg .media {
-  color: white !important;
+.archive-card-bg button {
+  color: #ffffff !important;
 }
 
 .archive-card-bg .muted {
-  color: rgba(255,255,255,0.88) !important;
+  color: rgba(255, 255, 255, 0.9) !important;
 }
 
-.archive-card-bg .archive-toggle {
-  border-color: rgba(255,255,255,0.35);
-  color: white;
-}
-
-.archive-card-bg .archive-toggle:hover {
-  background: rgba(255,255,255,0.12);
-}  
-
-.scroll-card.active-card {
-  position: relative;
-  overflow: hidden;
-  background-size: cover;
-  background-position: center;
-  border: 1px solid rgba(255,255,255,0.18);
-  box-shadow: 0 18px 45px rgba(15,35,70,0.18);
-}
-
-.scroll-card.active-card::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background:
-    linear-gradient(
-      to bottom,
-      rgba(6,18,40,0.82) 0%,
-      rgba(6,18,40,0.55) 30%,
-      rgba(6,18,40,0.45) 55%,
-      rgba(6,18,40,0.82) 100%
-    );
-  z-index: 1;
-}
-
-.scroll-card.active-card .media,
-.scroll-card.active-card .copy {
+.archive-card-bg .copy {
   position: relative;
   z-index: 2;
 }
 
-.scroll-card.active-card .media,
-.scroll-card.active-card h3,
-.scroll-card.active-card p,
-.scroll-card.active-card a {
-  color: white;
+.archive-card-bg .media {
+  position: relative;
+  z-index: 2;
+  background: transparent;
 }
 
-.scroll-card.active-card .copy {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  height: 100%;
-  padding-top: 90px;
-}
-
-.scroll-card.active-card .media {
+.archive-card-bg .archive-toggle-btn {
+  color: #ffffff !important;
   opacity: 0.95;
 }
 
-.scroll-card.active-card .copy h3 {
-  margin-top: 18px;
-}
+.archive-card-bg .archive-toggle-btn:hover {
+  opacity: 0.72;
+}    
     
   </style>
 </head>
@@ -1631,7 +1600,7 @@ Leads youth racing programs and contributes to the development of competitive sa
     <div class="scroller-wrap">
   <div class="scroller">
 
-      <div class="scroll-card active-card"
+      <div class="scroll-card archive-card-bg" id=""olympic-athlete-card"
 style="background-image:url('assets/archive/Florencia-Cerutti-2008-Beijing-Olympic-Games-sailing-radial-race-4.webp');">
       <div class="media">Olympic Athlete Archive</div>
       <div class="copy">
